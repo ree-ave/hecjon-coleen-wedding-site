@@ -8,11 +8,41 @@ function toggleContactsModal() {
     }
 }
 
-// Close modal when clicking outside of it
+// Open image modal for full resolution viewing
+function openImageModal(src, alt) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = src;
+    modalImage.alt = alt;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+}
+
+// Close image modal
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Allow scrolling again
+}
+
+// Close modal when clicking outside the image or on the close button
 document.addEventListener('click', function(event) {
-    const modal = document.getElementById('contactsModal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
+    const contactModal = document.getElementById('contactsModal');
+    const imageModal = document.getElementById('imageModal');
+    
+    if (event.target === contactModal) {
+        contactModal.style.display = 'none';
+    }
+    
+    if (event.target === imageModal) {
+        closeImageModal();
+    }
+});
+
+// Close image modal on Escape key press
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeImageModal();
     }
 });
 
