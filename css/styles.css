@@ -128,5 +128,3 @@ nav a {
 }
 
 /* Temporary: hide attire images on the live site to avoid broken image placeholders
-     These will be restored once the image files are pushed or available. */
-#attire img { display: none !important; }
