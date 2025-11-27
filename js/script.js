@@ -1,3 +1,28 @@
+// Menu Toggle for Dropdown Navigation
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+}
+
+// Close menu when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.nav-container')) {
+        navMenu.classList.remove('active');
+    }
+});
+
 // Toggle contact info modal
 function toggleContactsModal() {
     const modal = document.getElementById('contactsModal');
