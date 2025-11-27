@@ -1,25 +1,26 @@
-// Menu Toggle for Dropdown Navigation
-const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.getElementById('navMenu');
-const navLinks = document.querySelectorAll('.nav-link');
+// Dropdown Menu Toggle
+const dropdownBtn = document.getElementById('dropdownBtn');
+const dropdownContent = document.getElementById('dropdownContent');
+const dropdownItems = document.querySelectorAll('.dropdown-item');
 
-if (menuToggle) {
-    menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
+if (dropdownBtn) {
+    dropdownBtn.addEventListener('click', function(event) {
+        event.stopPropagation();
+        dropdownContent.classList.toggle('active');
     });
 }
 
-// Close menu when a link is clicked
-navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        navMenu.classList.remove('active');
+// Close dropdown when a link is clicked
+dropdownItems.forEach(item => {
+    item.addEventListener('click', function() {
+        dropdownContent.classList.remove('active');
     });
 });
 
-// Close menu when clicking outside
+// Close dropdown when clicking outside
 document.addEventListener('click', function(event) {
-    if (!event.target.closest('.nav-container')) {
-        navMenu.classList.remove('active');
+    if (!event.target.closest('.dropdown-menu-container')) {
+        dropdownContent.classList.remove('active');
     }
 });
 
