@@ -83,7 +83,8 @@ a:hover { text-decoration: underline; }
     z-index: 1;
     border-radius: 4px;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 5px;
     animation: slideDown 0.3s ease;
 }
