@@ -48,15 +48,16 @@ a:hover { text-decoration: underline; }
     max-width: 900px;
     margin: 0 auto;
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
 
 .dropdown-btn {
     background-color: var(--color-primary);
     color: var(--color-light-text);
-    padding: 12px 20px;
-    font-size: 1.1rem;
+    padding: 15px 30px;
+    font-size: 1.3rem;
     font-weight: bold;
     border: 2px solid var(--color-accent);
     border-radius: 4px;
@@ -64,7 +65,7 @@ a:hover { text-decoration: underline; }
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    width: 100%;
+    width: auto;
 }
 
 .dropdown-btn:hover {
