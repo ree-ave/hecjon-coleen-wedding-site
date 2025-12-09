@@ -274,6 +274,15 @@ document.addEventListener('DOMContentLoaded', function () {
                             document.body.appendChild(sc);
                         }
                     });
+                    // Run inline initializers (if present) to ensure UI is wired up
+                    try {
+                        setTimeout(function () {
+                            if (typeof initDropdownsInline === 'function') initDropdownsInline();
+                            if (typeof initMusicControlInline === 'function') initMusicControlInline();
+                        }, 0);
+                    } catch (initErr) {
+                        console.warn('Failed to run inline initializers:', initErr);
+                    }
                 } catch (e) {
                     console.warn('Error re-initializing fetched scripts:', e);
                     // As a fallback, append the main script
@@ -281,6 +290,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     s.src = 'js/script.js';
                     s.defer = true;
                     document.body.appendChild(s);
+                    // Try initializers again after fallback
+                    setTimeout(function () {
+                        try { if (typeof initDropdownsInline === 'function') initDropdownsInline(); } catch (_) {}
+                        try { if (typeof initMusicControlInline === 'function') initMusicControlInline(); } catch (_) {}
+                    }, 50);
                 }
             }).catch(err => {
                 // fallback to normal navigation if fetch fails
