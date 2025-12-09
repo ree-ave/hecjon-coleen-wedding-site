@@ -100,7 +100,7 @@ function closeImageModal() {
         function initCountdownInline(){
             // clear previous timer if present
             try{ if (window._countdownTimer) { clearInterval(window._countdownTimer); window._countdownTimer = null; } }catch(e){}
-            const weddingDate = new Date(2026,1,8,0,0,0); // Feb 8, 2026 local time
+            const weddingDate = new Date(2026,1,28,0,0,0); // Feb 28, 2026 local time
             const id = createCountdown(weddingDate);
             if (id) window._countdownTimer = id;
         }
