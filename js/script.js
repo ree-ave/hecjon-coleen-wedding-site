@@ -157,11 +157,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     fetchedScripts.forEach(oldScript => {
                         const newScript = document.createElement('script');
                         if (oldScript.src) {
+                            // Append as an immediately-executing script (no defer/async)
                             newScript.src = oldScript.getAttribute('src');
-                            if (oldScript.hasAttribute('defer')) newScript.setAttribute('defer', '');
-                            if (oldScript.hasAttribute('async')) newScript.setAttribute('async', '');
+                            newScript.async = false;
                             document.body.appendChild(newScript);
                         } else {
+                            // Inline scripts should execute immediately
                             newScript.textContent = oldScript.textContent;
                             document.body.appendChild(newScript);
                         }
@@ -173,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         if (!exists) {
                             const sc = document.createElement('script');
                             sc.src = src;
-                            sc.defer = true;
+                            sc.async = false;
                             document.body.appendChild(sc);
                         }
                     });

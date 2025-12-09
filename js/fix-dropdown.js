@@ -1,5 +1,5 @@
 // Fix dropdown show/hide behavior: robust toggle, outside click, ESC close
-document.addEventListener('DOMContentLoaded', function () {
+function initDropdowns() {
   function closeMenu(menu, btn) {
     if (!menu) return;
       menu.classList.remove('active');
@@ -57,4 +57,11 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
-});
+}
+
+// Run immediately if DOM is ready, otherwise wait for DOMContentLoaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initDropdowns);
+} else {
+  initDropdowns();
+}
