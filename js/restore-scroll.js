@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // When user clicks the invite button, immediately restore scrolling
   invite.addEventListener('click', function (ev) {
     // allow default navigation or inline-loading logic to proceed
+    // Remove the class-based lock as well so CSS no longer forces fixed positioning
+    try { document.body.classList.remove('invite-locked'); } catch (e) {}
     restoreScrolling();
   }, { passive: true });
 });
