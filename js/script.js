@@ -356,6 +356,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         setTimeout(function () {
                             if (typeof initDropdownsInline === 'function') initDropdownsInline();
                             if (typeof initMusicControlInline === 'function') initMusicControlInline();
+                               if (typeof initCountdownInline === 'function') initCountdownInline();
                         }, 0);
                     } catch (initErr) {
                         console.warn('Failed to run inline initializers:', initErr);
@@ -371,6 +372,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     setTimeout(function () {
                         try { if (typeof initDropdownsInline === 'function') initDropdownsInline(); } catch (_) {}
                         try { if (typeof initMusicControlInline === 'function') initMusicControlInline(); } catch (_) {}
+                           try { if (typeof initCountdownInline === 'function') initCountdownInline(); } catch (_) {}
                     }, 50);
                 }
                 // If the user already clicked the invite, try playing the bgMusic now that it exists
