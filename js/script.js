@@ -107,3 +107,31 @@ document.addEventListener('keydown', function(event) {
     applyReducedMotion();
     mq.addEventListener('change', applyReducedMotion);
 })();
+
+// Invite button animation + redirect (landing page)
+document.addEventListener('DOMContentLoaded', function () {
+    const invite = document.getElementById('inviteBtn');
+    if (!invite) return;
+
+    // quick pressed feedback for touch/click
+    invite.addEventListener('pointerdown', function () {
+        invite.classList.add('invite-pressed');
+    });
+    invite.addEventListener('pointerup', function () {
+        invite.classList.remove('invite-pressed');
+    });
+
+    invite.addEventListener('click', function (e) {
+        // prevent immediate navigation so animation can play
+        e.preventDefault();
+        // play subtle entrance animation then redirect
+        invite.classList.add('invite-clicked');
+        // disable further interaction
+        invite.style.pointerEvents = 'none';
+        // wait for the CSS transition to finish, then follow link
+        const delay = 340; // ms, matches CSS transition duration
+        setTimeout(function () {
+            window.location.href = invite.getAttribute('href');
+        }, delay);
+    });
+});
