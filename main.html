@@ -21,6 +21,76 @@
     </header>
 
         <!-- Navigation removed per request -->
+        <!-- Countdown timer (replaces navbar) -->
+        <div id="countdownContainer" class="countdown-container" role="timer" aria-live="polite" aria-atomic="true">
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="cd-days">0</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="cd-hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="cd-mins">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="cd-secs">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+        <style>
+        /* Countdown styles (kept minimal and self-contained) */
+        .countdown-container { display:flex; justify-content:center; padding:0.6rem 1rem; }
+        .countdown { display:flex; gap:0.6rem; align-items:center; }
+        .countdown-item { background: rgba(255,255,255,0.04); padding:0.45rem 0.8rem; border-radius:8px; min-width:64px; text-align:center; box-shadow: 0 1px 2px rgba(0,0,0,0.06); }
+        .countdown-value { display:block; font-size:1.05rem; font-weight:700; line-height:1; }
+        .countdown-label { display:block; font-size:0.65rem; opacity:0.9; margin-top:0.2rem; letter-spacing:0.6px; text-transform:uppercase; }
+        @media (max-width:520px) { .countdown { gap:0.4rem; } .countdown-item { padding:0.35rem 0.6rem; min-width:52px; } }
+        .countdown-done { text-align:center; font-weight:700; padding:0.5rem 1rem; }
+        </style>
+        <script>
+        (function(){
+            // Wedding date: Feb 8, 2026 (local time)
+            const weddingDate = new Date(2026, 1, 8, 0, 0, 0);
+            const daysEl = document.getElementById('cd-days');
+            const hoursEl = document.getElementById('cd-hours');
+            const minsEl = document.getElementById('cd-mins');
+            const secsEl = document.getElementById('cd-secs');
+            const container = document.getElementById('countdownContainer');
+
+            function pad(n){ return String(n).padStart(2,'0'); }
+
+            function updateCountdown(){
+                const now = new Date();
+                let diff = Math.floor((weddingDate - now) / 1000); // seconds
+                if (isNaN(diff)) return; // defensive
+                if (diff <= 0) {
+                    // Event passed
+                    if (container) container.innerHTML = '<div class="countdown-done">The big day has arrived — congratulations!</div>';
+                    clearInterval(timer);
+                    return;
+                }
+                const days = Math.floor(diff / 86400);
+                diff -= days * 86400;
+                const hours = Math.floor(diff / 3600);
+                diff -= hours * 3600;
+                const mins = Math.floor(diff / 60);
+                const secs = diff - mins * 60;
+
+                if (daysEl) daysEl.textContent = String(days);
+                if (hoursEl) hoursEl.textContent = pad(hours);
+                if (minsEl) minsEl.textContent = pad(mins);
+                if (secsEl) secsEl.textContent = pad(secs);
+            }
+
+            updateCountdown();
+            const timer = setInterval(updateCountdown, 1000);
+        })();
+        </script>
 
     <main class="container">
         <!-- Our Story Page -->
