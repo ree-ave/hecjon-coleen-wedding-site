@@ -150,11 +150,41 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Allow scrolling now that the main content is visible
                 document.body.style.overflow = 'auto';
 
-                // Re-append our main script so interactivity is restored
-                const s = document.createElement('script');
-                s.src = 'js/script.js';
-                s.defer = true;
-                document.body.appendChild(s);
+                // Re-execute any scripts included in the fetched document so
+                // dropdowns, galleries, and music controls initialize properly.
+                try {
+                    const fetchedScripts = doc.querySelectorAll('script');
+                    fetchedScripts.forEach(oldScript => {
+                        const newScript = document.createElement('script');
+                        if (oldScript.src) {
+                            newScript.src = oldScript.getAttribute('src');
+                            if (oldScript.hasAttribute('defer')) newScript.setAttribute('defer', '');
+                            if (oldScript.hasAttribute('async')) newScript.setAttribute('async', '');
+                            document.body.appendChild(newScript);
+                        } else {
+                            newScript.textContent = oldScript.textContent;
+                            document.body.appendChild(newScript);
+                        }
+                    });
+
+                    // Ensure essential scripts are present if not inlined
+                    ['js/script.js', 'js/fix-dropdown.js', 'js/music-control.js'].forEach(src => {
+                        const exists = Array.from(document.scripts).some(s => s.src && s.src.endsWith(src));
+                        if (!exists) {
+                            const sc = document.createElement('script');
+                            sc.src = src;
+                            sc.defer = true;
+                            document.body.appendChild(sc);
+                        }
+                    });
+                } catch (e) {
+                    console.warn('Error re-initializing fetched scripts:', e);
+                    // As a fallback, append the main script
+                    const s = document.createElement('script');
+                    s.src = 'js/script.js';
+                    s.defer = true;
+                    document.body.appendChild(s);
+                }
             }).catch(err => {
                 // fallback to normal navigation if fetch fails
                 console.error('Could not load main site inline:', err);
