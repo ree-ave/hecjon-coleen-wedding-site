@@ -17,13 +17,23 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--color-secondary);
+p { margin-bottom: 1rem; }
+/* Headings: use Playfair Display and a consistent scale. */
+h1, h2, h3, h4, h5, h6 {
+     font-family: 'Playfair Display', serif;
+     color: var(--color-secondary);
 }
 
-h1 { font-size: 3rem; text-align: center; margin-bottom: 0.5rem; }
-h2 { font-size: 2rem; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem; }
+/* Double the previous sizes to make headings larger and consistent across pages.
+    Use !important so these rules take precedence over inline font-size declarations. */
+h1 { font-size: 6rem !important; text-align: center; margin-bottom: 0.5rem !important; }
+h2 { font-size: 4rem !important; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem !important; }
+h3 { font-size: 2.5rem !important; }
+h4 { font-size: 2rem !important; }
+h5 { font-size: 1.5rem !important; }
+h6 { font-size: 1.2rem !important; }
+
+p { margin-bottom: 1rem; }
 p { margin-bottom: 1rem; }
 a { color: var(--color-primary); text-decoration: none; }
 a:hover { text-decoration: underline; }
