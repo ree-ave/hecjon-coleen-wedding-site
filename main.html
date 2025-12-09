@@ -22,6 +22,7 @@
 
         <!-- Navigation removed per request -->
         <!-- Countdown timer (replaces navbar) -->
+        <h2 class="countdown-heading">Our Big Day Awaits!</h2>
         <div id="countdownContainer" class="countdown-container" role="timer" aria-live="polite" aria-atomic="true">
             <div class="countdown" id="countdown">
                 <div class="countdown-item">
@@ -43,13 +44,19 @@
             </div>
         </div>
         <style>
+        /* Load a script-style webfont; fallback order: Luxurious Script (user-specified), Great Vibes, Tangerine, cursive */
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine:wght@700&display=swap');
+        /* Apply to all headings */
+        h1,h2,h3,h4,h5,h6 { font-family: 'Luxurious Script', 'Great Vibes', 'Tangerine', cursive !important; }
+
         /* Countdown styles (kept minimal and self-contained) */
+        .countdown-heading { text-align:center; margin:0.35rem 0 0.2rem 0; font-size:1.6rem; letter-spacing:0.6px; }
         .countdown-container { display:flex; justify-content:center; padding:0.6rem 1rem; }
         .countdown { display:flex; gap:0.6rem; align-items:center; }
         .countdown-item { background: rgba(255,255,255,0.04); padding:0.45rem 0.8rem; border-radius:8px; min-width:64px; text-align:center; box-shadow: 0 1px 2px rgba(0,0,0,0.06); }
         .countdown-value { display:block; font-size:1.05rem; font-weight:700; line-height:1; }
         .countdown-label { display:block; font-size:0.65rem; opacity:0.9; margin-top:0.2rem; letter-spacing:0.6px; text-transform:uppercase; }
-        @media (max-width:520px) { .countdown { gap:0.4rem; } .countdown-item { padding:0.35rem 0.6rem; min-width:52px; } }
+        @media (max-width:520px) { .countdown { gap:0.4rem; } .countdown-item { padding:0.35rem 0.6rem; min-width:52px; } .countdown-heading { font-size:1.25rem; } }
         .countdown-done { text-align:center; font-weight:700; padding:0.5rem 1rem; }
         </style>
         <script>
