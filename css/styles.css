@@ -217,4 +217,12 @@ a:hover { text-decoration: underline; }
     transform: scale(0.98) translateY(0);
 }
 
+/* Make the invite button match the site-wide header scale and script font */
+.invite-btn, #inviteBtn {
+    font-family: 'Luxurious Script','Great Vibes','Tangerine', cursive !important;
+    font-size: 6rem !important; /* matches h1 size */
+    line-height: 1 !important;
+    padding: 28px 56px !important;
+}
+
 /* Temporary: hide attire images on the live site to avoid broken image placeholders
