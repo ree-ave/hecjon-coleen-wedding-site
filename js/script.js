@@ -124,14 +124,42 @@ document.addEventListener('DOMContentLoaded', function () {
     invite.addEventListener('click', function (e) {
         // prevent immediate navigation so animation can play
         e.preventDefault();
-        // play subtle entrance animation then redirect
+        // play subtle entrance animation
         invite.classList.add('invite-clicked');
         // disable further interaction
         invite.style.pointerEvents = 'none';
-        // wait for the CSS transition to finish, then follow link
+
+        // After animation, fetch main.html and insert the main site
         const delay = 340; // ms, matches CSS transition duration
         setTimeout(function () {
-            window.location.href = invite.getAttribute('href');
+            const href = invite.getAttribute('href');
+            // Try to fetch main.html and insert its body to avoid full navigation
+            fetch(href, { cache: 'no-store' }).then(response => {
+                if (!response.ok) throw new Error('Fetch failed');
+                return response.text();
+            }).then(htmlText => {
+                // Parse the returned HTML and extract the <body> contents
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlText, 'text/html');
+                const newBody = doc.body;
+
+                // Replace current body content with the fetched page's body
+                // Keep the current <head> (CSS and fonts already loaded)
+                document.documentElement.replaceChild(newBody, document.body);
+
+                // Allow scrolling now that the main content is visible
+                document.body.style.overflow = 'auto';
+
+                // Re-append our main script so interactivity is restored
+                const s = document.createElement('script');
+                s.src = 'js/script.js';
+                s.defer = true;
+                document.body.appendChild(s);
+            }).catch(err => {
+                // fallback to normal navigation if fetch fails
+                console.error('Could not load main site inline:', err);
+                window.location.href = href;
+            });
         }, delay);
     });
 });
