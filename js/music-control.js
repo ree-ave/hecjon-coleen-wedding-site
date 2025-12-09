@@ -9,13 +9,15 @@
     btn.id = 'musicToggle';
     btn.setAttribute('aria-pressed', 'false');
     btn.title = 'Toggle background music';
+    // Float vertically centered on the right side
     btn.style.position = 'fixed';
-    btn.style.right = '16px';
-    btn.style.bottom = '16px';
+    btn.style.right = '12px';
+    btn.style.top = '50%';
+    btn.style.transform = 'translateY(-50%)';
     btn.style.zIndex = '10000';
-    btn.style.width = '48px';
-    btn.style.height = '48px';
-    btn.style.borderRadius = '24px';
+    btn.style.width = '52px';
+    btn.style.height = '52px';
+    btn.style.borderRadius = '26px';
     btn.style.border = 'none';
     btn.style.background = 'rgba(255,255,255,0.9)';
     btn.style.boxShadow = '0 6px 18px rgba(0,0,0,0.12)';
