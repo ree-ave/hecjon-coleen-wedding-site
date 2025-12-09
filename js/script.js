@@ -52,6 +52,69 @@ function closeImageModal() {
 }
 
 // Close modal when clicking outside the image or on the close button
+
+    // Countdown initializer — safe to call multiple times; attached to window for inline-load invocation
+    (function(){
+        function pad(n){ return String(n).padStart(2,'0'); }
+        function createCountdown(weddingDate){
+            // captures elements
+            const daysEl = document.getElementById('cd-days');
+            const hoursEl = document.getElementById('cd-hours');
+            const minsEl = document.getElementById('cd-mins');
+            const secsEl = document.getElementById('cd-secs');
+            const container = document.getElementById('countdownContainer');
+            if (!container || !daysEl) return null;
+
+            function update(){
+                const now = new Date();
+                let diff = Math.floor((weddingDate - now) / 1000);
+                if (isNaN(diff)) return;
+                if (diff <= 0){
+                    container.innerHTML = '<div class="countdown-done">The big day has arrived — congratulations!</div>';
+                    return 'done';
+                }
+                const days = Math.floor(diff / 86400);
+                diff -= days * 86400;
+                const hours = Math.floor(diff / 3600);
+                diff -= hours * 3600;
+                const mins = Math.floor(diff / 60);
+                const secs = diff - mins * 60;
+
+                daysEl.textContent = String(days);
+                hoursEl.textContent = pad(hours);
+                minsEl.textContent = pad(mins);
+                secsEl.textContent = pad(secs);
+                return 'running';
+            }
+
+            // run once and return the interval id
+            const first = update();
+            if (first === 'done') return null;
+            const id = setInterval(()=>{
+                const r = update();
+                if (r === 'done') clearInterval(id);
+            }, 1000);
+            return id;
+        }
+
+        function initCountdownInline(){
+            // clear previous timer if present
+            try{ if (window._countdownTimer) { clearInterval(window._countdownTimer); window._countdownTimer = null; } }catch(e){}
+            const weddingDate = new Date(2026,1,8,0,0,0); // Feb 8, 2026 local time
+            const id = createCountdown(weddingDate);
+            if (id) window._countdownTimer = id;
+        }
+
+        // expose globally so inline-load code can call it
+        window.initCountdownInline = initCountdownInline;
+
+        // If the DOM already contains the countdown (e.g., page loaded directly), start it now
+        if (document.readyState === 'complete' || document.readyState === 'interactive'){
+            if (document.getElementById('countdownContainer')) initCountdownInline();
+        }else{
+            document.addEventListener('DOMContentLoaded', function(){ if (document.getElementById('countdownContainer')) initCountdownInline(); });
+        }
+    })();
 document.addEventListener('click', function(event) {
     const contactModal = document.getElementById('contactsModal');
     const imageModal = document.getElementById('imageModal');
