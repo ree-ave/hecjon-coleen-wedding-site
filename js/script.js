@@ -108,6 +108,102 @@ document.addEventListener('keydown', function(event) {
     mq.addEventListener('change', applyReducedMotion);
 })();
 
+// Inline fallback initializers: ensure dropdown and music controls
+function initDropdownsInline() {
+    document.querySelectorAll('.dropdown-menu-container').forEach(container => {
+        const btn = container.querySelector('.dropdown-btn');
+        const menu = container.querySelector('.dropdown-content');
+        if (!btn || !menu) return;
+        // Avoid double-binding
+        if (btn._dropdownBound) return;
+        btn._dropdownBound = true;
+
+        btn.setAttribute('aria-haspopup', 'true');
+        btn.setAttribute('aria-expanded', menu.classList.contains('active') ? 'true' : 'false');
+
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const isOpen = menu.classList.contains('active');
+            if (isOpen) {
+                menu.classList.remove('active');
+                btn.setAttribute('aria-expanded', 'false');
+            } else {
+                menu.classList.add('active');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        menu.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function () {
+                menu.classList.remove('active');
+                btn.setAttribute('aria-expanded', 'false');
+            });
+        });
+    });
+
+    // outside click
+    document.addEventListener('click', function () {
+        document.querySelectorAll('.dropdown-content.active').forEach(menu => {
+            const container = menu.closest('.dropdown-menu-container');
+            const btn = container ? container.querySelector('.dropdown-btn') : null;
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+            menu.classList.remove('active');
+        });
+    });
+}
+
+function initMusicControlInline() {
+    // If music control already present, skip
+    if (document.getElementById('musicToggle')) return;
+    const music = document.getElementById('bgMusic');
+    if (!music) return;
+
+    // Create button (similar to music-control.js)
+    const btn = document.createElement('button');
+    btn.id = 'musicToggle';
+    btn.setAttribute('aria-pressed', 'false');
+    btn.title = 'Toggle background music';
+    btn.style.position = 'fixed';
+    btn.style.right = '12px';
+    btn.style.top = '50%';
+    btn.style.transform = 'translateY(-50%)';
+    btn.style.zIndex = '10000';
+    btn.style.width = '52px';
+    btn.style.height = '52px';
+    btn.style.borderRadius = '26px';
+    btn.style.border = 'none';
+    btn.style.background = 'rgba(255,255,255,0.9)';
+    btn.style.boxShadow = '0 6px 18px rgba(0,0,0,0.12)';
+    btn.style.fontSize = '18px';
+    btn.style.cursor = 'pointer';
+
+    function updateIcon() {
+        if (music.paused) {
+            btn.textContent = '🔇';
+            btn.setAttribute('aria-pressed', 'false');
+        } else {
+            btn.textContent = '🔊';
+            btn.setAttribute('aria-pressed', 'true');
+        }
+    }
+
+    btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (music.paused) {
+            music.play().catch(()=>{});
+        } else {
+            music.pause();
+        }
+        updateIcon();
+    });
+
+    music.addEventListener('play', updateIcon);
+    music.addEventListener('pause', updateIcon);
+
+    document.body.appendChild(btn);
+    updateIcon();
+}
+
 // Invite button animation + redirect (landing page)
 document.addEventListener('DOMContentLoaded', function () {
     const invite = document.getElementById('inviteBtn');
