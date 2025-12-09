@@ -13,11 +13,17 @@
     <link rel="stylesheet" href="css/styles.css">
     <style>
         /* Inline safety: ensure landing has blush/cream motif even if CSS load is delayed */
-        html,body{height:100%;margin:0}
+        html { height: 100%; }
+        /* Prevent scrolling on mobile/tablet by locking the viewport until main content loads */
+        body { height: 100%; margin: 0; overflow: hidden; position: fixed; width: 100%; overscroll-behavior: none; -webkit-overflow-scrolling: auto; }
         .invite-wrap{height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff2f4 0%,#fffaf0 100%);}
         .invite-card{max-width:760px;padding:30px;text-align:center}
         .invite-btn{display:inline-block;background:#f7d3d8;color:#5a3336;padding:28px 56px;border-radius:14px;font-family:'Playfair Display',serif;font-size:2.25rem;text-decoration:none;box-shadow:0 12px 30px rgba(90,51,54,0.12);border:2px solid rgba(90,51,54,0.06)}
         .invite-sub{margin-top:18px;color:#7b6b66;font-family:'Lora',serif}
+        @media (min-width: 900px) {
+            /* On large screens allow body positioning to be normal (desktop had no scroll issue) */
+            body { position: static; overflow: visible; }
+        }
     </style>
 </head>
 <body style="overflow:hidden;">
