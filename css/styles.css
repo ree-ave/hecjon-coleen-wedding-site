@@ -223,15 +223,3 @@ a:hover { text-decoration: underline; }
     font-size: 6rem !important; /* matches h1 size */
     line-height: 1 !important;
     padding: 28px 56px !important;
-}
-
-/* Responsive: reduce invite size on small screens */
-@media (max-width: 600px) {
-    .invite-btn, #inviteBtn {
-        font-size: 2.5rem !important;
-        padding: 14px 28px !important;
-        line-height: 1.05 !important;
-    }
-}
-
-/* Temporary: hide attire images on the live site to avoid broken image placeholders
