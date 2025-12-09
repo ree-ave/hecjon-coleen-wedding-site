@@ -19,7 +19,7 @@
         .invite-wrap{height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff2f4 0%,#fffaf0 100%);} 
         .invite-card{max-width:760px;padding:30px;text-align:center}
         .invite-btn{display:inline-block;background:#f7d3d8;color:#5a3336;padding:28px 56px;border-radius:14px;font-family:'Playfair Display',serif;font-size:2.25rem;text-decoration:none;box-shadow:0 12px 30px rgba(90,51,54,0.12);border:2px solid rgba(90,51,54,0.06)}
-            .invite-btn{display:inline-block;background:#f7d3d8;color:#5a3336;padding:28px 56px;border-radius:14px;font-family:'Luxurious Script','Great Vibes','Tangerine',cursive;font-size:2.25rem;text-decoration:none;box-shadow:0 12px 30px rgba(90,51,54,0.12);border:2px solid rgba(90,51,54,0.06)}
+            .invite-btn{display:inline-block;background:#f7d3d8;color:#5a3336;padding:28px 56px;border-radius:14px;font-family:'Luxurious Script','Great Vibes','Tangerine',cursive;font-size:2.66rem;text-decoration:none;box-shadow:0 12px 30px rgba(90,51,54,0.12);border:2px solid rgba(90,51,54,0.06)}
         .invite-sub{margin-top:18px;color:#7b6b66;font-family:'Lora',serif}
         @media (min-width: 900px) {
             /* On large screens allow body positioning to be normal (desktop had no scroll issue) */
@@ -57,21 +57,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
-    <header class="hero-section">
-        <h1 style="font-family: 'Tangerine', cursive; font-size: 5rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 0.2rem;">Hecjon & Coleen</h1>
-        <p style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--color-accent); letter-spacing: 3px; text-transform: uppercase; font-weight: 300; margin-top: 10px;">The Wedding</p>
-        <p style="font-family: 'Tangerine', cursive; font-size: 2rem; color: var(--color-text); margin-top: 15px;">February 8, 2026 | The Knot</p>
-    </header>
-
-    <nav class="navbar">
-        <div class="dropdown-menu-container">
-            <button class="dropdown-btn" id="dropdownBtn">☰ Menu</button>
-            <!-- Version: Menu 2.0 - Force cache refresh -->
-            <div class="dropdown-content" id="dropdownContent">
-                <a href="#story" class="dropdown-item">Story</a>
+    <style>
+        /* Inline safety styles for the landing */
+        html { height: 100%; }
+        body.invite-locked { height: 100%; margin: 0; overflow: hidden; position: fixed; width: 100%; overscroll-behavior: none; -webkit-overflow-scrolling: auto; }
+        .invite-wrap { height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, #fff2f4 0%, #fffaf0 100%); }
+        .invite-card { max-width: 760px; padding: 30px; text-align: center; }
+        /* Invite button uses the Luxurious Script stack and is increased by ~5pt */
+        .invite-btn { display: inline-block; background: #f7d3d8; color: #5a3336; padding: 28px 56px; border-radius: 14px; font-family: 'Luxurious Script','Great Vibes','Tangerine', cursive; font-size: 2.66rem; text-decoration: none; box-shadow: 0 12px 30px rgba(90,51,54,0.12); border: 2px solid rgba(90,51,54,0.06); }
+        .invite-sub { margin-top: 18px; color: #7b6b66; font-family: 'Lora', serif; }
+        @media (min-width: 900px) { body.invite-locked { position: static; overflow: visible; } }
+    </style>
                 <a href="#gallery" class="dropdown-item">Gallery</a>
                 <a href="#attire" class="dropdown-item">Attire</a>
                 <a href="#location" class="dropdown-item">Location</a>
