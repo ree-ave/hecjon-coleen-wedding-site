@@ -44,5 +44,20 @@ document.addEventListener('DOMContentLoaded', function () {
     // Remove the class-based lock as well so CSS no longer forces fixed positioning
     try { document.body.classList.remove('invite-locked'); } catch (e) {}
     restoreScrolling();
+    // Mark that invite was clicked (user gesture) and try to start background music
+    window._inviteClicked = true;
+    // Try to start background music (user gesture has occurred)
+    try {
+      const music = document.getElementById('bgMusic');
+      if (music) {
+        music.volume = 0.45;
+        const p = music.play();
+        if (p && typeof p.then === 'function') {
+          p.catch(err => console.warn('Music play prevented:', err));
+        }
+      }
+    } catch (err) {
+      console.warn('Error attempting to play background music:', err);
+    }
   }, { passive: true });
 });

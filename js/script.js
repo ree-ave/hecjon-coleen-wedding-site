@@ -246,6 +246,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Allow scrolling now that the main content is visible
                 document.body.style.overflow = 'auto';
 
+                // Ensure the background audio element exists in the head.
+                try {
+                    if (!document.getElementById('bgMusic')) {
+                        const audio = document.createElement('audio');
+                        audio.id = 'bgMusic';
+                        audio.src = 'audio/Sa Bawat Sandali - Amiel Sol (Official Music Video).mp3';
+                        audio.loop = true;
+                        audio.preload = 'auto';
+                        document.head.appendChild(audio);
+                    }
+                } catch (audioErr) {
+                    console.warn('Could not ensure bgMusic element:', audioErr);
+                }
+
                 // Re-execute any scripts included in the fetched document so
                 // dropdowns, galleries, and music controls initialize properly.
                 try {
@@ -271,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             const sc = document.createElement('script');
                             sc.src = src;
                             sc.async = false;
-                            document.body.appendChild(sc);
+                            document.body.appendChild(sc);   
                         }
                     });
                     // Run inline initializers (if present) to ensure UI is wired up
@@ -295,6 +309,19 @@ document.addEventListener('DOMContentLoaded', function () {
                         try { if (typeof initDropdownsInline === 'function') initDropdownsInline(); } catch (_) {}
                         try { if (typeof initMusicControlInline === 'function') initMusicControlInline(); } catch (_) {}
                     }, 50);
+                }
+                // If the user already clicked the invite, try playing the bgMusic now that it exists
+                try {
+                    if (window._inviteClicked) {
+                        const music = document.getElementById('bgMusic');
+                        if (music) {
+                            music.volume = 0.45;
+                            const p = music.play();
+                            if (p && typeof p.then === 'function') p.catch(() => {});
+                        }
+                    }
+                } catch (playErr) {
+                    console.warn('Error attempting to play bgMusic after inject:', playErr);
                 }
             }).catch(err => {
                 // fallback to normal navigation if fetch fails
