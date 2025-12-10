@@ -1,3 +1,11 @@
+/* 
+   CRITICAL: Background Color Strategy
+   ====================================
+   - Base h1-h6 rule (line ~24): NO background-color (transparent)
+   - Section headings (.section h2-h6): Get taupe background (#8c7b64)
+   - Hero section (.hero-section): White background with transparent heading backgrounds
+   - This prevents unwanted background colors from affecting non-section headings like the logo
+*/
 /* --- Color Variables & Base Styles --- */
 :root {
     --color-primary: #73816a; /* Sage Green */
@@ -27,11 +35,20 @@ p { margin-bottom: 1rem; }
 h1, h2, h3, h4, h5, h6 { text-align: center;
     font-family: 'Playfair Display', serif;
     color: #000000;
-    background-color: #8c7b64;
     padding: 1rem;
 }
 
-/* Tripled and tripled again header sizes for maximum prominence.
+
+/* Section headings (h2-h6) get taupe background with full-width effect */
+.section h2,
+.section h3,
+.section h4,
+.section h5,
+.section h6 {
+    background-color: #8c7b64;
+}
+
+ for maximum prominence.
    Use !important so these rules take precedence over inline font-size declarations. */
 h1 { font-size: 108rem !important; text-align: center; margin: 0 !important; box-shadow: -100vw 0 0 100vw #8c7b64, 100vw 0 0 100vw #8c7b64; }
 h2 { text-align: center; font-size: 72rem !important; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem !important; margin: 0 !important; box-shadow: -100vw 0 0 100vw #8c7b64, 100vw 0 0 100vw #8c7b64; }
@@ -162,6 +179,17 @@ a:hover { text-decoration: underline; }
     background-color: #ffffff;
     text-align: center;
     padding: 100px 20px;
+}
+
+/* Ensure hero section headings don't get taupe background */
+.hero-section h1,
+.hero-section h2,
+.hero-section h3,
+.hero-section h4,
+.hero-section h5,
+.hero-section h6 {
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 /* Gallery specifics (placeholders) */
@@ -307,3 +335,7 @@ a:hover { text-decoration: underline; }
         max-width: 200px;
     }
 }
+
+
+
+
