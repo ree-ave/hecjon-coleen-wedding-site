@@ -1,0 +1,13 @@
+/* Headings: use Playfair Display and a consistent scale. */ 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    background-color: #8c7b64;
+    padding: 1rem;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
