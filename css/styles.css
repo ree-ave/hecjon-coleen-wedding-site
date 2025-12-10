@@ -3,7 +3,7 @@
     --color-primary: #73816a; /* Sage Green */
     --color-secondary: #8c7b64; /* Taupe/Brown */
     --color-accent: #d4bf9e; /* Champagne */
-    --color-background: #f2e8d9; /* Cream/Ivory */
+    --color-background: #ffffff; /* White */
     --color-text: #4b4b4b; /* Dark Gray for readability */
     --color-light-text: #ffffff;
 }
@@ -151,7 +151,7 @@ a:hover { text-decoration: underline; }
 }
 
 .hero-section {
-    background-color: var(--color-background);
+    background-color: #ffffff;
     text-align: center;
     padding: 100px 20px;
 }
