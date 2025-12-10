@@ -20,7 +20,7 @@ body {
     font-family: 'Lora', serif;
     color: var(--color-text);
     background-color: var(--color-background);
-    background-image: url('images/wedding_bg/weddingsite_bg.jpg');
+    background-image: url('images/wedding_bg/white_satin.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -338,6 +338,8 @@ a:hover { text-decoration: underline; }
         max-width: 200px;
     }
 }
+
+
 
 
 
