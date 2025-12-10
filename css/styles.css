@@ -280,3 +280,30 @@ a:hover { text-decoration: underline; }
 
 
 
+
+/* Wedding logo styling with feathered edges */
+.wedding-logo {
+    max-width: 500px;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 30px rgba(0, 0, 0, 0.1),
+        inset 0 0 30px rgba(0, 0, 0, 0.05);
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.08));
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .wedding-logo {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .wedding-logo {
+        max-width: 200px;
+    }
+}
