@@ -224,6 +224,14 @@ a:hover { text-decoration: underline; }
       mask-image: radial-gradient(circle, black 70%, transparent 100%);
   }
 
+    /* Desktop centering - use full width for better centering */
+    @media (min-width: 901px) {
+        .wedding-logo {
+            width: 100%;
+            margin: 20px auto;
+        }
+    }
+
   @media (max-width: 900px) {
       .wedding-logo { max-width: 200px; }
   }
