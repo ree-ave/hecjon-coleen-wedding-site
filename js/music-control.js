@@ -19,7 +19,7 @@
     btn.style.height = '52px';
     btn.style.borderRadius = '26px';
     btn.style.border = 'none';
-    btn.style.background = 'rgba(255,255,255,0.9)';
+    btn.style.background = 'rgba(140, 123, 100, 0.85)';
     btn.style.boxShadow = '0 6px 18px rgba(0,0,0,0.12)';
     btn.style.fontSize = '18px';
     btn.style.cursor = 'pointer';
@@ -61,3 +61,4 @@
     initMusicControl();
   }
 })();
+
