@@ -195,6 +195,48 @@ a:hover { text-decoration: underline; }
     box-shadow: none !important;
 }
 
+
+  /* ==========================================
+     Wedding Logo Sizing Strategy (CRITICAL)
+     ==========================================
+     Desktop (900px+): max-width 500px
+     Tablets (≤900px): max-width 200px
+     Mobile (≤600px): max-width 80px
+     Extra Small (≤400px): max-width 60px
+     
+     width: 100% allows max-width to properly
+     constrain size on mobile. If logo is too large:
+     1. Check device width breakpoint
+     2. Reduce max-width value
+     3. Don't change width percentage
+     ========================================== */
+  .wedding-logo {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 50%;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1), inset 0 0 30px rgba(0, 0, 0, 0.05);
+      filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.08));
+      object-fit: cover;
+      left: 50%;
+      transform: translateX(-50%);
+      position: relative;
+  }
+
+  @media (max-width: 900px) {
+      .wedding-logo { max-width: 200px; }
+  }
+
+  @media (max-width: 600px) {
+      .wedding-logo { max-width: 80px; }
+  }
+
+  @media (max-width: 400px) {
+      .wedding-logo { max-width: 60px; }
+  }
+
 /* Gallery specifics (placeholders) */
 .gallery-grid {
     display: grid;
@@ -297,64 +339,6 @@ a:hover { text-decoration: underline; }
     font-size: 6rem !important; /* matches h1 size */
     line-height: 1 !important;
     padding: 28px 56px !important;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Wedding logo styling with feathered edges */
-
-  /* Responsive hero section for mobile and tablet */
-  @media (max-width: 900px) {
-      .hero-section {
-          padding: 50px 15px;
-      }
-  }
-
-  @media (max-width: 600px) {
-      .hero-section {
-          padding: 30px 10px;
-      }
-  }
-
-.wedding-logo {
-    max-width: 500px;
-    width: 90%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 50%;
-    box-shadow: 
-        0 0 30px rgba(0, 0, 0, 0.1),
-        inset 0 0 30px rgba(0, 0, 0, 0.05);
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.08));
-    object-fit: cover;
-      left: 50%;
-      transform: translateX(-50%);
-      position: relative;
-}
-
-@media (max-width: 900px) {
-    .wedding-logo {
-        max-width: 200px;
-    }
-}
-
-@media (max-width: 600px) {
-    .wedding-logo {
-        max-width: 120px;
-    }
-}
 
 
 
