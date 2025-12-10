@@ -223,6 +223,8 @@ a:hover { text-decoration: underline; }
       left: 50%;
       transform: translateX(-50%);
       position: relative;
+      -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
+      mask-image: radial-gradient(circle, black 70%, transparent 100%);
   }
 
   @media (max-width: 900px) {
@@ -255,6 +257,8 @@ a:hover { text-decoration: underline; }
     --gallery-gap: 16px;     /* gap between images */
     --gallery-speed: 20s;    /* lower = faster, e.g., '12s' */
     position: relative;
+      -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
+      mask-image: radial-gradient(circle, black 70%, transparent 100%);
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
