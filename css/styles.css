@@ -201,8 +201,8 @@ a:hover { text-decoration: underline; }
      ==========================================
      Desktop (900px+): max-width 500px
      Tablets (≤900px): max-width 200px
-     Mobile (≤600px): max-width 80px
-     Extra Small (≤400px): max-width 60px
+     Mobile (≤600px): max-width 150px
+     Extra Small (≤400px): max-width 100px
      
      width: 100% allows max-width to properly
      constrain size on mobile. If logo is too large:
@@ -230,11 +230,11 @@ a:hover { text-decoration: underline; }
   }
 
   @media (max-width: 600px) {
-      .wedding-logo { max-width: 80px; }
+      .wedding-logo { max-width: 150px; }
   }
 
   @media (max-width: 400px) {
-      .wedding-logo { max-width: 60px; }
+      .wedding-logo { max-width: 100px; }
   }
 
 /* Gallery specifics (placeholders) */
@@ -339,6 +339,8 @@ a:hover { text-decoration: underline; }
     font-size: 6rem !important; /* matches h1 size */
     line-height: 1 !important;
     padding: 28px 56px !important;
+
+
 
 
 
