@@ -33,12 +33,12 @@ h1, h2, h3, h4, h5, h6 { text-align: center;
 
 /* Tripled and tripled again header sizes for maximum prominence.
    Use !important so these rules take precedence over inline font-size declarations. */
-h1 { font-size: 108rem !important; text-align: center; margin-bottom: 0.5rem !important; }
-h2 { text-align: center; font-size: 72rem !important; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem !important; }
-h3 { text-align: center; font-size: 45rem !important; }
-h4 { text-align: center; font-size: 36rem !important; }
-h5 { text-align: center; font-size: 27rem !important; }
-h6 { text-align: center; font-size: 21.6rem !important; }p { margin-bottom: 1rem; }
+h1 { font-size: 108rem !important; text-align: center; margin: 0 !important; box-shadow: -100vw 0 0 100vw #8c7b64, 100vw 0 0 100vw #8c7b64; }
+h2 { text-align: center; font-size: 72rem !important; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem !important; margin: 0 !important; box-shadow: -100vw 0 0 100vw #8c7b64, 100vw 0 0 100vw #8c7b64; }
+h3 { text-align: center; font-size: 45rem !important; margin: 0 !important; box-shadow: -100vw 0 0 100vw #8c7b64, 100vw 0 0 100vw #8c7b64; }
+h4 { text-align: center; font-size: 36rem !important; margin: 0 !important; box-shadow: -100vw 0 0 100vw #8c7b64, 100vw 0 0 100vw #8c7b64; }
+h5 { text-align: center; font-size: 27rem !important; margin: 0 !important; box-shadow: -100vw 0 0 100vw #8c7b64, 100vw 0 0 100vw #8c7b64; }
+h6 { text-align: center; font-size: 21.6rem !important; margin: 0 !important; box-shadow: -100vw 0 0 100vw #8c7b64, 100vw 0 0 100vw #8c7b64; }p { margin-bottom: 1rem; }
 
 /* Responsive reductions for headings to keep layout usable on smaller screens */
 @media (max-width: 900px) { h1 { text-align: center; font-size: 4rem !important; }
@@ -266,6 +266,8 @@ a:hover { text-decoration: underline; }
     font-size: 6rem !important; /* matches h1 size */
     line-height: 1 !important;
     padding: 28px 56px !important;
+
+
 
 
 
