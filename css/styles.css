@@ -329,15 +329,17 @@ a:hover { text-decoration: underline; }
 
 @media (max-width: 900px) {
     .wedding-logo {
-        max-width: 300px;
+        max-width: 200px;
     }
 }
 
 @media (max-width: 600px) {
     .wedding-logo {
-        max-width: 200px;
+        max-width: 120px;
     }
 }
+
+
 
 
 
