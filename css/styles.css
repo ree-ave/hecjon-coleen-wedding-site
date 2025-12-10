@@ -201,8 +201,8 @@ a:hover { text-decoration: underline; }
      ==========================================
      Desktop (900px+): max-width 500px
      Tablets (≤900px): max-width 200px
-     Mobile (≤600px): max-width 150px
-     Extra Small (≤400px): max-width 100px
+     Mobile (≤600px): max-width 250px
+     Extra Small (≤400px): max-width 180px
      
      width: 100% allows max-width to properly
      constrain size on mobile. If logo is too large:
@@ -212,7 +212,7 @@ a:hover { text-decoration: underline; }
      ========================================== */
   .wedding-logo {
       max-width: 500px;
-      width: 100%;
+      width: 90%;
       height: auto;
       display: block;
       margin: 20px auto;
@@ -220,9 +220,6 @@ a:hover { text-decoration: underline; }
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.1), inset 0 0 30px rgba(0, 0, 0, 0.05);
       filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.08));
       object-fit: cover;
-      left: 50%;
-      transform: translateX(-50%);
-      position: relative;
       -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
       mask-image: radial-gradient(circle, black 70%, transparent 100%);
   }
@@ -232,11 +229,11 @@ a:hover { text-decoration: underline; }
   }
 
   @media (max-width: 600px) {
-      .wedding-logo { max-width: 150px; }
+      .wedding-logo { max-width: 250px; }
   }
 
   @media (max-width: 400px) {
-      .wedding-logo { max-width: 100px; }
+      .wedding-logo { max-width: 180px; }
   }
 
 /* Gallery specifics (placeholders) */
@@ -343,6 +340,7 @@ a:hover { text-decoration: underline; }
     font-size: 6rem !important; /* matches h1 size */
     line-height: 1 !important;
     padding: 28px 56px !important;
+
 
 
 
