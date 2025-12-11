@@ -358,7 +358,7 @@ img {
 /* Wedding logo - responsive sizing across all devices */
 .wedding-logo {
     max-width: 50px !important;
-    width: 100% !important;
+    width: auto !important;
     height: auto !important;
     margin: 3px auto 1px !important;
     display: block !important;
@@ -388,21 +388,21 @@ img {
 /* Wedding logo - mobile (600px and below) */
 @media (max-width: 600px) {
     .wedding-logo {
-        max-width: 35px !important;
+        max-width: 32px !important;
     }
 }
 
 /* Wedding logo - mobile (480px and below) */
 @media (max-width: 480px) {
     .wedding-logo {
-        max-width: 30px !important;
+        max-width: 28px !important;
     }
 }
 
 /* Wedding logo - mobile (360px and below) */
 @media (max-width: 360px) {
     .wedding-logo {
-        max-width: 25px !important;
+        max-width: 24px !important;
     }
 }
 
