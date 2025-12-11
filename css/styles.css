@@ -339,38 +339,38 @@ img {
 }
 /* Save the Date Image - optimized for mobile and tablets */
 .save-the-date-img {
-    max-width: 280px;
+    max-width: 160px;
     width: 85%;
     margin: 20px auto 30px;
 }
 
 @media (max-width: 1024px) {
     .save-the-date-img {
-        max-width: 240px;
+        max-width: 140px;
     }
 }
 
 @media (max-width: 768px) {
     .save-the-date-img {
-        max-width: 200px;
+        max-width: 120px;
     }
 }
 
 @media (max-width: 600px) {
     .save-the-date-img {
-        max-width: 160px;
+        max-width: 100px;
     }
 }
 
 @media (max-width: 480px) {
     .save-the-date-img {
-        max-width: 140px;
+        max-width: 85px;
     }
 }
 
 @media (max-width: 360px) {
     .save-the-date-img {
-        max-width: 120px;
+        max-width: 70px;
     }
 }
 /* Scroll-triggered paragraph animations */
