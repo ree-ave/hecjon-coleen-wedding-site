@@ -487,6 +487,7 @@ img {
       text-transform: uppercase;
       transition: all 0.3s ease;
       font-size: 0.95rem;
+      text-align: center;
   }
 
   .download-btn:hover {
@@ -497,6 +498,11 @@ img {
 
   .download-btn:active {
       transform: translateY(0);
+  }
+
+  /* Center the download button in RSVP section */
+  #rsvp {
+      text-align: center;
   }
 
   @media (max-width: 600px) {
