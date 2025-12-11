@@ -482,17 +482,18 @@ img {
 
   /* Download button for QR code */
   .download-btn {
-      display: inline-block;
-      background-color: #8c7b64;
-      color: #f5f1e8;
-      padding: 12px 24px;
-      margin: 15px auto 0 !important;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
+        display: block;
+        width: fit-content;
+        margin: 15px auto 0 !important;
+        background-color: #8c7b64;
+        color: #f5f1e8;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
       font-size: 0.95rem;
       text-align: center;
   }
@@ -553,6 +554,8 @@ img {
           text-align: center !important;
       }
   }
+
+
 
 
 
