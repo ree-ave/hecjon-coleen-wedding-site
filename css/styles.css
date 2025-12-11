@@ -479,7 +479,7 @@ img {
       background-color: #8c7b64;
       color: #f5f1e8;
       padding: 12px 24px;
-      margin-top: 15px;
+      margin: 15px auto 0 !important;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
@@ -503,6 +503,12 @@ img {
   /* Center the download button in RSVP section */
   #rsvp {
       text-align: center;
+  }
+
+  #rsvp .download-btn {
+      display: block;
+      width: fit-content;
+      margin: 15px auto 0 !important;
   }
 
   @media (max-width: 600px) {
