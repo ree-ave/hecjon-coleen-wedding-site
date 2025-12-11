@@ -55,11 +55,10 @@ h1, h2, h3, h4, h5, h6 { text-align: center;
     align-items: center;
     text-align: center;
     width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    margin-top: 0;
+    margin-bottom: 0;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 1.5rem;
@@ -67,6 +66,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center;
     word-wrap: break-word;
     overflow-wrap: break-word;
     line-height: 1.4;
+}
 }
 
  for maximum prominence.
@@ -362,51 +362,51 @@ img {
 
 /* Wedding logo - responsive sizing across all devices */
 .wedding-logo {
-    max-width: 90px;
-    width: 85%;
+    max-width: 60px;
+    width: 80%;
     height: auto;
-    margin: 10px auto 5px;
+    margin: 8px auto 3px;
 }
 
 /* Wedding logo - tablets (1024px and below) */
 @media (max-width: 1024px) {
     .wedding-logo {
-        max-width: 80px;
+        max-width: 55px;
     }
 }
 
 /* Wedding logo - tablets (900px and below) */
 @media (max-width: 900px) {
     .wedding-logo {
-        max-width: 70px;
+        max-width: 50px;
     }
 }
 
 /* Wedding logo - tablets (768px and below) */
 @media (max-width: 768px) {
     .wedding-logo {
-        max-width: 60px;
+        max-width: 42px;
     }
 }
 
 /* Wedding logo - mobile (600px and below) */
 @media (max-width: 600px) {
     .wedding-logo {
-        max-width: 50px;
+        max-width: 35px;
     }
 }
 
 /* Wedding logo - mobile (480px and below) */
 @media (max-width: 480px) {
     .wedding-logo {
-        max-width: 45px;
+        max-width: 30px;
     }
 }
 
 /* Wedding logo - mobile (360px and below) */
 @media (max-width: 360px) {
     .wedding-logo {
-        max-width: 35px;
+        max-width: 25px;
     }
 }
 
