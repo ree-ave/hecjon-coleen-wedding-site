@@ -408,7 +408,43 @@ img {
           max-width: 22px !important;
           width: 22px !important;
       }
-  }/* Scroll-triggered paragraph animations */
+  }
+
+  /* QR Code Styling */
+  .qr-code {
+      max-width: 300px !important;
+      width: 300px !important;
+      height: auto !important;
+      margin: 20px auto !important;
+      display: block !important;
+      border: 2px solid #8c7b64;
+      padding: 10px;
+      background-color: #ffffff;
+  }
+
+  /* Responsive QR code sizing */
+  @media (max-width: 768px) {
+      .qr-code {
+          max-width: 250px !important;
+          width: 250px !important;
+      }
+  }
+
+  @media (max-width: 600px) {
+      .qr-code {
+          max-width: 200px !important;
+          width: 200px !important;
+      }
+  }
+
+  @media (max-width: 360px) {
+      .qr-code {
+          max-width: 150px !important;
+          width: 150px !important;
+      }
+  }
+
+  /* Scroll-triggered paragraph animations */
 .section p {
     opacity: 0;
     transform: translateX(-60px);
