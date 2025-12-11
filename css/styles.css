@@ -362,51 +362,51 @@ img {
 
 /* Wedding logo - responsive sizing across all devices */
 .wedding-logo {
-    max-width: 60px;
+    max-width: 30px;
     width: 80%;
     height: auto;
-    margin: 8px auto 3px;
+    margin: 5px auto 2px;
 }
 
 /* Wedding logo - tablets (1024px and below) */
 @media (max-width: 1024px) {
     .wedding-logo {
-        max-width: 55px;
+        max-width: 27px;
     }
 }
 
 /* Wedding logo - tablets (900px and below) */
 @media (max-width: 900px) {
     .wedding-logo {
-        max-width: 50px;
+        max-width: 25px;
     }
 }
 
 /* Wedding logo - tablets (768px and below) */
 @media (max-width: 768px) {
     .wedding-logo {
-        max-width: 42px;
+        max-width: 21px;
     }
 }
 
 /* Wedding logo - mobile (600px and below) */
 @media (max-width: 600px) {
     .wedding-logo {
-        max-width: 35px;
+        max-width: 17px;
     }
 }
 
 /* Wedding logo - mobile (480px and below) */
 @media (max-width: 480px) {
     .wedding-logo {
-        max-width: 30px;
+        max-width: 15px;
     }
 }
 
 /* Wedding logo - mobile (360px and below) */
 @media (max-width: 360px) {
     .wedding-logo {
-        max-width: 25px;
+        max-width: 12px;
     }
 }
 
