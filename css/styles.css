@@ -456,6 +456,15 @@ img {
     transform: translateX(0);
 }
 
+/* Lock horizontal scrolling on mobile and tablet */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+        width: 100vw !important;
+    }
+}
+
 
 
 
