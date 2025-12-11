@@ -418,8 +418,8 @@ img {
     /* QR Code Styling */
   .qr-code {
         display: block !important;
-        max-width: 100px !important;
-        width: 100px !important;
+        max-width: 150px !important;
+        width: 150px !important;
         height: auto !important;
         margin: 20px auto !important;
         text-align: center;
@@ -430,31 +430,31 @@ img {
 
   /* Responsive QR code sizing */
   @media (max-width: 1024px) {
-      .qr-code {
-          max-width: 80px !important;
-            width: 80px !important;
+        .qr-code {
+            max-width: 120px !important;
+            width: 120px !important;
       }
   }
 
   @media (max-width: 900px) {
-      .qr-code {
-          max-width: 60px !important;
-            width: 60px !important;
+        .qr-code {
+            max-width: 100px !important;
+            width: 100px !important;
       }
   }
 
   @media (max-width: 768px) {
         .qr-code {
-            max-width: 20px !important;
-            width: 20px !important;
+            max-width: 80px !important;
+            width: 80px !important;
           padding: 8px;
       }
   }
 
   @media (max-width: 600px) {
         .qr-code {
-            max-width: 15px !important;
-            width: 15px !important;
+            max-width: 70px !important;
+            width: 70px !important;
           padding: 6px;
           margin: 15px auto !important;
       }
@@ -462,8 +462,8 @@ img {
 
   @media (max-width: 480px) {
         .qr-code {
-            max-width: 20px !important;
-            width: 20px !important;
+            max-width: 80px !important;
+            width: 80px !important;
           padding: 5px;
           border: 1px solid #8c7b64;
           margin: 12px auto !important;
@@ -472,8 +472,8 @@ img {
 
   @media (max-width: 360px) {
         .qr-code {
-            max-width: 15px !important;
-            width: 15px !important;
+            max-width: 70px !important;
+            width: 70px !important;
           padding: 4px;
           border: 1px solid #8c7b64;
           margin: 10px auto !important;
@@ -553,6 +553,7 @@ img {
           text-align: center !important;
       }
   }
+
 
 
 
