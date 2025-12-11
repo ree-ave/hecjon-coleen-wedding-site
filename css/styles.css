@@ -8,10 +8,9 @@
 */
 /* --- Color Variables & Base Styles --- */
 html {
-    height: 100%;
-}
-
-:root {
+      height: 100%;
+      overflow-x: hidden;
+  }:root {
     --color-primary: #73816a; /* Sage Green */
     --color-secondary: #8c7b64; /* Taupe/Brown */
     --color-accent: #d4bf9e; /* Champagne */
@@ -33,6 +32,7 @@ body {
       padding: 0;
       line-height: 1.6;
       min-height: 100vh;
+        max-width: 100vw;
       overflow-x: hidden;
   }p { margin-bottom: 1rem; text-align: center; }
 /* Headings: use Playfair Display and a consistent scale. */
