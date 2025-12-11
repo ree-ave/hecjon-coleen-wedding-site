@@ -417,10 +417,11 @@ img {
 
     /* QR Code Styling */
   .qr-code {
+        display: block !important;
         max-width: 100px !important;
         width: 100px !important;
-      height: auto !important;
-      margin: 20px auto !important;
+        height: auto !important;
+        margin: 20px auto !important;
       display: block !important;
       border: 2px solid #8c7b64;
       padding: 10px;
