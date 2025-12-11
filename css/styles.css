@@ -365,58 +365,64 @@ a:hover { text-decoration: underline; }
 img {
     display: block;
     margin: 15px auto;
-    max-width: 100%;
     height: auto;
 }
 
-/* Wedding logo - responsive sizing across all devices */
+/* Wedding logo - responsive sizing across all devices - DESKTOP */
 .wedding-logo {
-    max-width: 50px !important;
-    width: auto !important;
+    max-width: 80px !important;
+    width: 80px !important;
     height: auto !important;
-    margin: 3px auto 1px !important;
+    margin: 5px auto 2px !important;
     display: block !important;
+    object-fit: contain !important;
 }
 
 /* Wedding logo - tablets (1024px and below) */
 @media (max-width: 1024px) {
     .wedding-logo {
-        max-width: 48px !important;
+        max-width: 75px !important;
+        width: 75px !important;
     }
 }
 
 /* Wedding logo - tablets (900px and below) */
 @media (max-width: 900px) {
     .wedding-logo {
-        max-width: 45px !important;
+        max-width: 70px !important;
+        width: 70px !important;
     }
 }
 
 /* Wedding logo - tablets (768px and below) */
 @media (max-width: 768px) {
     .wedding-logo {
-        max-width: 40px !important;
+        max-width: 60px !important;
+        width: 60px !important;
     }
 }
 
 /* Wedding logo - mobile (600px and below) */
 @media (max-width: 600px) {
     .wedding-logo {
-        max-width: 32px !important;
+        max-width: 50px !important;
+        width: 50px !important;
     }
 }
 
 /* Wedding logo - mobile (480px and below) */
 @media (max-width: 480px) {
     .wedding-logo {
-        max-width: 28px !important;
+        max-width: 45px !important;
+        width: 45px !important;
     }
 }
 
 /* Wedding logo - mobile (360px and below) */
 @media (max-width: 360px) {
     .wedding-logo {
-        max-width: 24px !important;
+        max-width: 40px !important;
+        width: 40px !important;
     }
 }
 
