@@ -285,6 +285,12 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         // play subtle entrance animation
         invite.classList.add('invite-clicked');
+        
+        // Trigger zoom fade out transition on the invite wrapper
+        const inviteWrap = document.querySelector('.invite-wrap');
+        if (inviteWrap) {
+            inviteWrap.classList.add('invite-exit');
+        }
         // disable further interaction
         invite.style.pointerEvents = 'none';
 
@@ -395,4 +401,40 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }, delay);
     });
+
+// Scroll-triggered paragraph animations
+document.addEventListener('DOMContentLoaded', function() {
+    const paragraphs = document.querySelectorAll('.section p');
+    
+    if (paragraphs.length === 0) return; // No paragraphs to animate
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px' // Trigger when element is 100px from bottom of viewport
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Stagger animation for each paragraph
+                const paragraphs = Array.from(document.querySelectorAll('.section p'));
+                const index = paragraphs.indexOf(entry.target);
+                const delay = index * 100; // 100ms delay between each paragraph
+                
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, delay);
+                
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+    
+    paragraphs.forEach(p => observer.observe(p));
 });
+
+});
+
+
+
+

@@ -7,6 +7,10 @@
    - This prevents unwanted background colors from affecting non-section headings like the logo
 */
 /* --- Color Variables & Base Styles --- */
+html {
+    height: 100%;
+}
+
 :root {
     --color-primary: #73816a; /* Sage Green */
     --color-secondary: #8c7b64; /* Taupe/Brown */
@@ -28,6 +32,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 p { margin-bottom: 1rem; }
@@ -46,6 +51,12 @@ h1, h2, h3, h4, h5, h6 { text-align: center;
 .section h5,
 .section h6 {
     background-color: #8c7b64;
+    /* Full-width background spanning entire viewport */
+    margin-left: calc(-100vw);
+    margin-right: calc(-100vw);
+    padding-left: 100vw;
+    padding-right: 100vw;
+}
 }
 
  for maximum prominence.
@@ -84,7 +95,7 @@ a:hover { text-decoration: underline; }
     padding: 20px;
     background-color: transparent;
     border-radius: 8px;
-}
+    overflow: visible;
 
 /* --- Navigation Bar --- */
 .navbar {
@@ -173,13 +184,13 @@ a:hover { text-decoration: underline; }
 .section {
     padding: 60px 20px;
     border-bottom: 1px solid var(--color-accent);
-    background-color: rgba(255, 255, 255, 0.80);
+    background-color: rgba(255, 255, 255, 0.15);
     margin: 20px 0;
     border-radius: 8px;
 }
 
 .hero-section {
-    background-color: #ffffff;
+    background-color: transparent;
     text-align: center;
     padding: 100px 20px;
 }
@@ -244,6 +255,32 @@ a:hover { text-decoration: underline; }
       .wedding-logo { max-width: 180px; }
   }
 
+/* Save the Date Image */
+.save-the-date-img {
+    max-width: 600px;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+@media (max-width: 900px) {
+    .save-the-date-img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .save-the-date-img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .save-the-date-img {
+        max-width: 250px;
+    }
+}
 /* Gallery specifics (placeholders) */
 .gallery-grid {
     display: grid;
@@ -364,5 +401,20 @@ a:hover { text-decoration: underline; }
 
 
 
+
+
+
+/* Scroll-triggered paragraph animations */
+.section p {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.section p.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 

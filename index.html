@@ -18,6 +18,15 @@
         .invite-card { width: 100vw; padding: 30px; text-align: center; background: rgba(212, 191, 158, 0.7); display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .invite-btn { display: inline-block; background: transparent; color: #5a3336; padding: 28px 56px; border-radius: 14px; font-family: 'Luxurious Script','Great Vibes','Tangerine', cursive; font-size: 2.66rem; text-decoration: none; box-shadow: none; border: none; }
         .invite-sub { margin-top: 18px; color: #7b6b66; font-family: 'Lora', serif; }
+          
+          /* Zoom fade out transition when leaving invite page */
+          .invite-wrap {
+              transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.6s ease-out;
+          }
+          .invite-wrap.invite-exit {
+              transform: scale(1.2) translateZ(0);
+              opacity: 0;
+          }
         @media (min-width: 900px) { 
             body.invite-locked { position: static; overflow: visible; } 
         }
@@ -29,7 +38,7 @@
     <main class="invite-wrap">
         <div class="invite-card">
             <a href="main.html" id="inviteBtn" class="invite-btn">You're invited!</a>
-            <p class="invite-sub">Click to enter the wedding site</p>
+            <p class="invite-sub">Two are better than one... If either of them falls down, one can help the other up... A cord of three strands is not quickly broken. -Ecclesiastes 4:9-12</p>
         </div>
     </main>
 
@@ -38,6 +47,9 @@
     <script src="js/fix-dropdown.js" defer></script>
 </body>
 </html>
+
+
+
 
 
 
