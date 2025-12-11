@@ -96,15 +96,9 @@ a:hover { text-decoration: underline; }
     background-color: transparent;
     border-radius: 8px;
     overflow: visible;
-
-/* --- Navigation Bar --- */
-.navbar {
-    background-color: var(--color-primary);
-    color: var(--color-light-text);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .dropdown-menu-container {
@@ -193,6 +187,10 @@ a:hover { text-decoration: underline; }
 
 .hero-section {
     background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 100px 20px;
 }
@@ -209,114 +207,6 @@ a:hover { text-decoration: underline; }
 }
 
 
-  /* ==========================================
-     Wedding Logo Sizing Strategy (CRITICAL)
-     ==========================================
-     Desktop (900px+): max-width 500px
-     Tablets (≤900px): max-width 200px
-     Mobile (≤600px): max-width 250px
-     Extra Small (≤400px): max-width 180px
-     
-     width: 100% allows max-width to properly
-     constrain size on mobile. If logo is too large:
-     1. Check device width breakpoint
-     2. Reduce max-width value
-     3. Don't change width percentage
-     ========================================== */
-  .wedding-logo {
-      max-width: 500px;
-      width: 90%;
-      height: auto;
-      display: block;
-      margin: 20px auto;
-      border-radius: 50%;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1), inset 0 0 30px rgba(0, 0, 0, 0.05);
-      filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.08));
-      object-fit: cover;
-      -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
-      mask-image: radial-gradient(circle, black 70%, transparent 100%);
-  }
-
-    /* Desktop centering - use full width for better centering */
-    @media (min-width: 901px) {
-        .wedding-logo {
-            width: 100%;
-            margin: 20px auto;
-        }
-    }
-
-  @media (max-width: 900px) {
-      .wedding-logo { max-width: 200px; }
-  }
-
-  @media (max-width: 600px) {
-      .wedding-logo { max-width: 250px; }
-  }
-
-  @media (max-width: 400px) {
-      .wedding-logo { max-width: 180px; }
-  }
-
-/* Save the Date Image */
-.save-the-date-img {
-    max-width: 200px;
-    width: 80%;
-    height: auto;
-    display: block;
-    margin: 15px auto;
-}
-
-@media (max-width: 900px) {
-    .save-the-date-img {
-        max-width: 150px;
-    }
-}
-
-@media (max-width: 600px) {
-    .save-the-date-img {
-        max-width: 120px;
-    }
-}
-
-@media (max-width: 400px) {
-    .save-the-date-img {
-        max-width: 100px;
-    }
-}
-@media (max-width: 900px) {
-    .save-the-date-img {
-        max-width: 240px;
-    }
-}
-
-@media (max-width: 600px) {
-    .save-the-date-img {
-        max-width: 180px;
-    }
-}
-
-@media (max-width: 400px) {
-    .save-the-date-img {
-        max-width: 150px;
-    }
-}
-@media (max-width: 900px) {
-    .save-the-date-img {
-        max-width: 400px;
-    }
-}
-
-@media (max-width: 600px) {
-    .save-the-date-img {
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 400px) {
-    .save-the-date-img {
-        max-width: 250px;
-    }
-}
 /* Gallery specifics (placeholders) */
 .gallery-grid {
     display: grid;
@@ -440,6 +330,13 @@ a:hover { text-decoration: underline; }
 
 
 
+/* Universal image centering for all images (current and future) */
+img {
+    display: block;
+    margin: 15px auto;
+    max-width: 100%;
+    height: auto;
+}
 /* Scroll-triggered paragraph animations */
 .section p {
     opacity: 0;
@@ -452,5 +349,7 @@ a:hover { text-decoration: underline; }
     opacity: 1;
     transform: translateX(0);
 }
+
+
 
 
