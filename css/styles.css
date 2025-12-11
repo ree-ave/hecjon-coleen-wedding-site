@@ -257,13 +257,30 @@ a:hover { text-decoration: underline; }
 
 /* Save the Date Image */
 .save-the-date-img {
-    max-width: 600px;
+    max-width: 350px;
     width: 90%;
     height: auto;
     display: block;
     margin: 20px auto;
 }
 
+@media (max-width: 900px) {
+    .save-the-date-img {
+        max-width: 240px;
+    }
+}
+
+@media (max-width: 600px) {
+    .save-the-date-img {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 400px) {
+    .save-the-date-img {
+        max-width: 150px;
+    }
+}
 @media (max-width: 900px) {
     .save-the-date-img {
         max-width: 400px;
