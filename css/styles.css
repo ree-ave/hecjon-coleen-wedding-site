@@ -337,6 +337,42 @@ img {
     max-width: 100%;
     height: auto;
 }
+/* Save the Date Image - optimized for mobile and tablets */
+.save-the-date-img {
+    max-width: 280px;
+    width: 85%;
+    margin: 20px auto 30px;
+}
+
+@media (max-width: 1024px) {
+    .save-the-date-img {
+        max-width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .save-the-date-img {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .save-the-date-img {
+        max-width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .save-the-date-img {
+        max-width: 140px;
+    }
+}
+
+@media (max-width: 360px) {
+    .save-the-date-img {
+        max-width: 120px;
+    }
+}
 /* Scroll-triggered paragraph animations */
 .section p {
     opacity: 0;
@@ -349,6 +385,7 @@ img {
     opacity: 1;
     transform: translateX(0);
 }
+
 
 
 
