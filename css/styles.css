@@ -9,7 +9,9 @@
 /* --- Color Variables & Base Styles --- */
 html {
       height: 100%;
-      overflow-x: hidden;
+      overflow-x: hidden !important;
+      width: 100%;
+      max-width: 100vw;
   }:root {
     --color-primary: #73816a; /* Sage Green */
     --color-secondary: #8c7b64; /* Taupe/Brown */
