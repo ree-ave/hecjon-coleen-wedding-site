@@ -83,12 +83,12 @@ h1, h2, h3, h4, h5, h6 { text-align: center;
     background-color: #8c7b64;
     z-index: -1;
 }
-h1 { font-size: 3.5rem !important; text-align: center; margin: 0 !important; }
-h2 { text-align: center; font-size: 3rem !important; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem !important; margin: 0 !important; }
-h3 { text-align: center; font-size: 2.5rem !important; margin: 0 !important; }
-h4 { text-align: center; font-size: 2rem !important; margin: 0 !important; }
-h5 { text-align: center; font-size: 1.5rem !important; margin: 0 !important; }
-h6 { text-align: center; font-size: 1.2rem !important; margin: 0 !important; }p { margin-bottom: 1rem; }
+h1 { font-size: 7rem !important; text-align: center; margin: 0 !important; }
+h2 { text-align: center; font-size: 6rem !important; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem !important; margin: 0 !important; }
+h3 { text-align: center; font-size: 5rem !important; margin: 0 !important; }
+h4 { text-align: center; font-size: 4rem !important; margin: 0 !important; }
+h5 { text-align: center; font-size: 3rem !important; margin: 0 !important; }
+h6 { text-align: center; font-size: 2.4rem !important; margin: 0 !important; }p { margin-bottom: 1rem; }
 
 /* Ensure ALL headings are centered - applies to existing and future headings */
 h1, h2, h3, h4, h5, h6 {
@@ -104,21 +104,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Responsive reductions for headings to keep layout usable on smaller screens */
 @media (max-width: 900px) { 
-    h1 { text-align: center; font-size: 2.8rem !important; }
-    h2 { font-size: 2.5rem !important; }
-    h3 { font-size: 2rem !important; }
-    h4 { font-size: 1.6rem !important; }
-    h5 { font-size: 1.3rem !important; }
-    h6 { font-size: 1rem !important; }
+    h1 { text-align: center; font-size: 5.6rem !important; }
+    h2 { font-size: 5rem !important; }
+    h3 { font-size: 4rem !important; }
+    h4 { font-size: 3.2rem !important; }
+    h5 { font-size: 2.6rem !important; }
+    h6 { font-size: 2rem !important; }
 }
 
 @media (max-width: 600px) {
-    h1 { font-size: 2rem !important; }
-    h2 { font-size: 1.8rem !important; }
-    h3 { font-size: 1.5rem !important; }
-    h4 { font-size: 1.2rem !important; }
-    h5 { font-size: 1rem !important; }
-    h6 { font-size: 0.9rem !important; }
+    h1 { font-size: 4rem !important; }
+    h2 { font-size: 3.6rem !important; }
+    h3 { font-size: 3rem !important; }
+    h4 { font-size: 2.4rem !important; }
+    h5 { font-size: 2rem !important; }
+    h6 { font-size: 1.8rem !important; }
 }
 p { margin-bottom: 1rem; text-align: center; }
 a { color: var(--color-primary); text-decoration: none; }
@@ -546,6 +546,7 @@ img {
         width: 100vw !important;
     }
 }
+
 
 
 
