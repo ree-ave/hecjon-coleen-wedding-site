@@ -302,23 +302,7 @@ a:hover { text-decoration: underline; }
     .rtl-track img { width: 140px; }
 }
 
-/* Responsive: reduce header sizes on tablets and mobile for better readability */
-@media (max-width: 900px) { h1 { text-align: center; font-size: 36rem !important; }
-    h2 { font-size: 24rem !important; }
-    h3 { font-size: 15rem !important; }
-    h4 { font-size: 12rem !important; }
-    h5 { font-size: 9rem !important; }
-    h6 { font-size: 7.2rem !important; }
-}
 
-@media (max-width: 600px) {
-    h1 { font-size: 18rem !important; }
-    h2 { font-size: 12rem !important; }
-    h3 { font-size: 9rem !important; }
-    h4 { font-size: 7.5rem !important; }
-    h5 { font-size: 6rem !important; }
-    h6 { font-size: 4.5rem !important; }
-}
 
 /* Invite button click animation (landing page) */
 #inviteBtn {
