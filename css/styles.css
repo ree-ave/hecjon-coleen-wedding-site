@@ -55,14 +55,17 @@ h1, h2, h3, h4, h5, h6 { text-align: center;
     align-items: center;
     text-align: center;
     width: 100vw;
-    margin-left: calc(-50vw + 50% + 0.5px);
-    margin-right: calc(-50vw + 50% + 0.5px);
-    padding-left: calc(50vw - 50% + 20px);
-    padding-right: calc(50vw - 50% + 20px);
-    max-width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    min-height: auto;
     line-height: 1.4;
 }
 
@@ -79,21 +82,12 @@ h6 { text-align: center; font-size: 1.2rem !important; margin: 0 !important; }p 
 h1, h2, h3, h4, h5, h6 {
     text-align: center !important;
     margin: 0 !important;
+    padding: 1rem !important;
     max-width: 100%;
     word-wrap: break-word;
     overflow-wrap: break-word;
     background-color: #8c7b64;
     color: #f5f1e8;
-}
-
-/* Add padding only to non-section headings */
-h1:not(.section *), h2:not(.section *), h3:not(.section *), h4:not(.section *), h5:not(.section *), h6:not(.section *) {
-    padding: 1rem !important;
-}
-
-/* Ensure section headings have proper padding */
-.section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
-    padding: 1.5rem 20px !important;
 }
 /* Responsive reductions for headings to keep layout usable on smaller screens */
 @media (max-width: 900px) { 
