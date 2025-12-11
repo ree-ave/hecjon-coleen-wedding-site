@@ -66,11 +66,10 @@ h1, h2, h3, h4, h5, h6 { text-align: center;
     word-wrap: break-word;
     overflow-wrap: break-word;
     line-height: 1.4;
-}
+    box-sizing: border-box;
 }
 
- for maximum prominence.
-   Use !important so these rules take precedence over inline font-size declarations. */
+/* Base heading styles */
 h1 { font-size: 3.5rem !important; text-align: center; margin: 0 !important; }
 h2 { text-align: center; font-size: 3rem !important; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem !important; margin: 0 !important; }
 h3 { text-align: center; font-size: 2.5rem !important; margin: 0 !important; }
@@ -88,6 +87,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
     background-color: #8c7b64;
     color: #f5f1e8;
+    box-sizing: border-box;
 }
 /* Responsive reductions for headings to keep layout usable on smaller screens */
 @media (max-width: 900px) { 
