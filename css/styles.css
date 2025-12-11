@@ -438,29 +438,38 @@ img {
 
   @media (max-width: 768px) {
       .qr-code {
-          max-width: 220px !important;
-          width: 220px !important;
+          max-width: 180px !important;
+          width: 180px !important;
+          padding: 8px;
       }
   }
 
   @media (max-width: 600px) {
       .qr-code {
-          max-width: 180px !important;
-          width: 180px !important;
+          max-width: 140px !important;
+          width: 140px !important;
+          padding: 6px;
+          margin: 15px auto !important;
       }
   }
 
   @media (max-width: 480px) {
       .qr-code {
-          max-width: 150px !important;
-          width: 150px !important;
+          max-width: 120px !important;
+          width: 120px !important;
+          padding: 5px;
+          border: 1px solid #8c7b64;
+          margin: 12px auto !important;
       }
   }
 
   @media (max-width: 360px) {
       .qr-code {
-          max-width: 130px !important;
-          width: 130px !important;
+          max-width: 100px !important;
+          width: 100px !important;
+          padding: 4px;
+          border: 1px solid #8c7b64;
+          margin: 10px auto !important;
       }
   }
 
