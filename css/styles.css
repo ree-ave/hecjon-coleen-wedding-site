@@ -368,65 +368,63 @@ img {
     height: auto;
 }
 
-/* Wedding logo - responsive sizing across all devices - DESKTOP */
-.wedding-logo {
-    max-width: 80px !important;
-    width: 80px !important;
-    height: auto !important;
-    margin: 5px auto 2px !important;
-    display: block !important;
-    object-fit: contain !important;
-}
+  /* Wedding logo - responsive sizing across all devices - DESKTOP */
+  .wedding-logo {
+      max-width: 40px !important;
+      width: 40px !important;
+      height: auto !important;
+      margin: 5px auto 2px !important;
+      display: block !important;
+      object-fit: contain !important;
+  }
 
-/* Wedding logo - tablets (1024px and below) */
-@media (max-width: 1024px) {
-    .wedding-logo {
-        max-width: 75px !important;
-        width: 75px !important;
-    }
-}
+  /* Wedding logo - tablets (1024px and below) */
+  @media (max-width: 1024px) {
+      .wedding-logo {
+          max-width: 38px !important;
+          width: 38px !important;
+      }
+  }
 
-/* Wedding logo - tablets (900px and below) */
-@media (max-width: 900px) {
-    .wedding-logo {
-        max-width: 70px !important;
-        width: 70px !important;
-    }
-}
+  /* Wedding logo - tablets (900px and below) */
+  @media (max-width: 900px) {
+      .wedding-logo {
+          max-width: 35px !important;
+          width: 35px !important;
+      }
+  }
 
-/* Wedding logo - tablets (768px and below) */
-@media (max-width: 768px) {
-    .wedding-logo {
-        max-width: 60px !important;
-        width: 60px !important;
-    }
-}
+  /* Wedding logo - tablets (768px and below) */
+  @media (max-width: 768px) {
+      .wedding-logo {
+          max-width: 30px !important;
+          width: 30px !important;
+      }
+  }
 
-/* Wedding logo - mobile (600px and below) */
-@media (max-width: 600px) {
-    .wedding-logo {
-        max-width: 50px !important;
-        width: 50px !important;
-    }
-}
+  /* Wedding logo - mobile (600px and below) */
+  @media (max-width: 600px) {
+      .wedding-logo {
+          max-width: 28px !important;
+          width: 28px !important;
+      }
+  }
 
-/* Wedding logo - mobile (480px and below) */
-@media (max-width: 480px) {
-    .wedding-logo {
-        max-width: 45px !important;
-        width: 45px !important;
-    }
-}
+  /* Wedding logo - mobile (480px and below) */
+  @media (max-width: 480px) {
+      .wedding-logo {
+          max-width: 25px !important;
+          width: 25px !important;
+      }
+  }
 
-/* Wedding logo - mobile (360px and below) */
-@media (max-width: 360px) {
-    .wedding-logo {
-        max-width: 40px !important;
-        width: 40px !important;
-    }
-}
-
-/* Scroll-triggered paragraph animations */
+  /* Wedding logo - mobile (360px and below) */
+  @media (max-width: 360px) {
+      .wedding-logo {
+          max-width: 22px !important;
+          width: 22px !important;
+      }
+  }/* Scroll-triggered paragraph animations */
 .section p {
     opacity: 0;
     transform: translateX(-60px);
