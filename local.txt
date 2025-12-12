@@ -1,0 +1,5 @@
+5c3e448 Add logo sizing fix documentation for future reference
+393776b Fix critical logo sizing issue: Exclude .wedding-logo and .qr-code from universal img selector
+4eb724d Remove floating music button from invite page
+9d977ca Add music-control.js to invite.html for floating music button
+df239ac Reduce logo size to half on all breakpoints

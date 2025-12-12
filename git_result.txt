@@ -1,0 +1,1 @@
+393776b Fix critical logo sizing issue: Exclude .wedding-logo and .qr-code from universal img selector
