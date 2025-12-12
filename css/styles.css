@@ -441,6 +441,7 @@ img {
         max-width: 75vw !important;
         width: 75vw !important;
         height: auto !important;
+        max-height: 300px !important;
         margin: 0 auto !important;
         padding: 0 !important;
         object-fit: contain !important;
@@ -453,6 +454,7 @@ img {
         .welcome-banner {
             max-width: 75vw !important;
             width: 75vw !important;
+            max-height: 280px !important;
         }
     }
 
@@ -460,6 +462,7 @@ img {
         .welcome-banner {
             max-width: 75vw !important;
             width: 75vw !important;
+            max-height: 250px !important;
         }
     }
 
@@ -467,6 +470,7 @@ img {
         .welcome-banner {
             max-width: 75vw !important;
             width: 75vw !important;
+            max-height: 220px !important;
         }
     }
 
@@ -474,6 +478,7 @@ img {
         .welcome-banner {
             max-width: 75vw !important;
             width: 75vw !important;
+            max-height: 200px !important;
         }
     }
 
@@ -481,6 +486,7 @@ img {
         .welcome-banner {
             max-width: 75vw !important;
             width: 75vw !important;
+            max-height: 180px !important;
         }
     }
 
