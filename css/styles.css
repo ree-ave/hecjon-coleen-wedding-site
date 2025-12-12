@@ -108,6 +108,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #8c7b64;
     color: #f5f1e8;
     box-sizing: border-box;
+    font-size: 1.8rem !important;
     font-family: 'Luxurious Script', 'Great Vibes', 'Tangerine', cursive !important;
 }
 /* Responsive reductions for headings to keep layout usable on smaller screens */
@@ -799,3 +800,30 @@ img {
 
 
 
+
+
+
+/* Mobile heading font sizes */
+@media (max-width: 768px) {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.4rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.3rem !important;
+    }
+}
+
+@media (max-width: 360px) {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.2rem !important;
+    }
+}
