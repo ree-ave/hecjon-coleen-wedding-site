@@ -380,8 +380,7 @@ img:not(.wedding-logo):not(.qr-code) {
 
   /* Wedding logo - responsive sizing across all devices - DESKTOP */
   .wedding-logo {
-        max-width: 75px !important;
-        width: 75px !important;
+        max-width: 50px !important; width: 50px !important;
         height: auto !important;
         margin: 5px auto 2px !important;
         display: block !important;
@@ -852,6 +851,7 @@ img:not(.wedding-logo):not(.qr-code) {
     font-family: 'Montserrat', sans-serif !important;
     text-align: left !important;
 }
+
 
 
 
