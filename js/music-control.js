@@ -4,10 +4,11 @@
     const music = document.getElementById('bgMusic');
     if (!music) return;
 
-    // Set volume and attempt to autoplay
-    if (!music.volume) {
-      music.volume = 0.45;
-    }
+    // Set volume immediately
+    music.volume = 0.45;
+    
+    // Check if invite was clicked (mobile redirect scenario)
+    const inviteClicked = window._inviteClicked === true;
 
     // Create toggle button
     const btn = document.createElement('button');
@@ -56,18 +57,42 @@
     // Insert button into body
     document.body.appendChild(btn);
 
-    // Attempt to play music immediately
-    const playPromise = music.play();
-    if (playPromise !== undefined) {
-      playPromise.then(() => {
-        updateIcon();
-      }).catch(err => {
-        console.log('Autoplay prevented:', err);
-        updateIcon();
-      });
-    } else {
-      updateIcon();
+    // Function to attempt playing music
+    function attemptPlay() {
+      if (music.paused) {
+        const playPromise = music.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            console.log('[Music] Successfully playing');
+            updateIcon();
+          }).catch(err => {
+            console.log('[Music] Autoplay prevented (this is normal on mobile):', err.name);
+            updateIcon();
+          });
+        }
+      }
     }
+
+    // If on main page (invite was clicked), attempt to play immediately
+    if (inviteClicked) {
+      attemptPlay();
+      
+      // Add a one-time user interaction handler to play music if it failed
+      // This ensures music starts when user interacts with the page
+      const playOnInteraction = function() {
+        attemptPlay();
+        document.removeEventListener('click', playOnInteraction);
+        document.removeEventListener('touchstart', playOnInteraction);
+      };
+      
+      document.addEventListener('click', playOnInteraction, { once: true });
+      document.addEventListener('touchstart', playOnInteraction, { once: true });
+    } else {
+      // On landing page, attempt to play
+      attemptPlay();
+    }
+    
+    updateIcon();
   }
 
   if (document.readyState === 'loading') {
@@ -76,4 +101,3 @@
     initMusicControl();
   }
 })();
-

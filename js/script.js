@@ -400,9 +400,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (window._inviteClicked) {
                         const music = document.getElementById('bgMusic');
                         if (music) {
+                            // Ensure volume is set and muted is false
                             music.volume = 0.45;
+                            music.muted = false;
+                            console.log('[Script] Attempting to play music after page inject, volume:', music.volume, 'muted:', music.muted);
                             const p = music.play();
-                            if (p && typeof p.then === 'function') p.catch(() => {});
+                            if (p && typeof p.then === 'function') {
+                              p.catch(err => {
+                                console.log('[Script] Autoplay failed (normal on mobile):', err.name);
+                              });
+                            }
                         }
                     }
                 } catch (playErr) {
@@ -567,6 +574,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return originalSetInnerHTML.call(this);
       }
   });});
+
 
 
 
