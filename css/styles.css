@@ -435,6 +435,54 @@ img {
         background-color: #ffffff !important;
     }
 
+    /* Welcome Banner - Responsive and Non-Cropping */
+    .welcome-banner {
+        display: block !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        object-fit: contain !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    @media (max-width: 1024px) {
+        .welcome-banner {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .welcome-banner {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .welcome-banner {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .welcome-banner {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .welcome-banner {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+
     /* Responsive QR code sizing */
     @media (max-width: 1024px) {
         .qr-code {
@@ -483,7 +531,7 @@ img {
               margin: 8px auto 14px !important;
           }
       }    /* Section-specific responsive images (not QR code) */
-    .section img:not(.qr-code):not(.wedding-logo) {
+    .section img:not(.qr-code):not(.wedding-logo):not(.welcome-banner) {
         max-width: 100% !important;
         width: auto !important;
         height: auto !important;
@@ -582,6 +630,14 @@ img {
   }
 
     /* Center the download button in RSVP section */
+    #welcome {
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        background-color: transparent !important;
+        border-radius: 0 !important;
+    }
+
     #rsvp {
         text-align: center !important;
     }
