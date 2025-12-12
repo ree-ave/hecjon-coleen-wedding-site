@@ -6,16 +6,17 @@
 
     // Set volume immediately
     music.volume = 0.45;
-    
+
     // Check if invite was clicked (mobile redirect scenario)
     const inviteClicked = window._inviteClicked === true;
 
-    // Create toggle button
+    // Create toggle button with heart shape
     const btn = document.createElement('button');
     btn.id = 'musicToggle';
     btn.setAttribute('aria-pressed', 'true');
     btn.title = 'Toggle background music';
-    // Float vertically centered on the right side
+    
+    // Heart shape styling
     btn.style.position = 'fixed';
     btn.style.right = '12px';
     btn.style.top = '50%';
@@ -23,31 +24,43 @@
     btn.style.zIndex = '10000';
     btn.style.width = '52px';
     btn.style.height = '52px';
-    btn.style.borderRadius = '26px';
     btn.style.border = 'none';
-    btn.style.background = 'rgba(140, 123, 100, 0.85)';
-    btn.style.boxShadow = '0 6px 18px rgba(0,0,0,0.12)';
-    btn.style.fontSize = '18px';
+    btn.style.background = 'transparent';
     btn.style.cursor = 'pointer';
+    btn.style.fontSize = '48px';
+    btn.style.lineHeight = '52px';
+    btn.style.textAlign = 'center';
+    btn.style.padding = '0';
+    btn.style.display = 'flex';
+    btn.style.alignItems = 'center';
+    btn.style.justifyContent = 'center';
+    btn.style.transition = 'transform 0.2s ease';
 
     function updateIcon() {
       if (music.paused) {
-        btn.textContent = '🔇';
+        btn.textContent = '🖤';
         btn.setAttribute('aria-pressed', 'false');
+        btn.style.transform = 'translateY(-50%) scale(0.9)';
       } else {
-        btn.textContent = '🔊';
+        btn.textContent = '❤️';
         btn.setAttribute('aria-pressed', 'true');
+        btn.style.transform = 'translateY(-50%) scale(1)';
       }
     }
 
     btn.addEventListener('click', function (e) {
       e.stopPropagation();
+      // Add a subtle pulse animation on click
+      btn.style.transform = btn.style.transform.replace('scale(1)', 'scale(1.2)').replace('scale(0.9)', 'scale(1.1)');
+      setTimeout(() => {
+        updateIcon();
+      }, 100);
+      
       if (music.paused) {
         music.play().catch(() => {});
       } else {
         music.pause();
       }
-      updateIcon();
     });
 
     // Update icon on play/pause events
@@ -76,7 +89,7 @@
     // If on main page (invite was clicked), attempt to play immediately
     if (inviteClicked) {
       attemptPlay();
-      
+
       // Add a one-time user interaction handler to play music if it failed
       // This ensures music starts when user interacts with the page
       const playOnInteraction = function() {
@@ -84,14 +97,14 @@
         document.removeEventListener('click', playOnInteraction);
         document.removeEventListener('touchstart', playOnInteraction);
       };
-      
+
       document.addEventListener('click', playOnInteraction, { once: true });
       document.addEventListener('touchstart', playOnInteraction, { once: true });
     } else {
       // On landing page, attempt to play
       attemptPlay();
     }
-    
+
     updateIcon();
   }
 
