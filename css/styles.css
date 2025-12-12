@@ -550,8 +550,7 @@ img {
         }
     }  /* Download button for QR code */
   .download-btn {
-        display: block;
-        width: fit-content;
+        display: inline-block !important;
         margin: 15px auto 0 !important;
         background-color: #8c7b64;
         color: #f5f1e8;
@@ -576,23 +575,42 @@ img {
       transform: translateY(0);
   }
 
-  /* Center the download button in RSVP section */
-  #rsvp {
-      text-align: center;
-  }
+    /* Center the download button in RSVP section */
+    #rsvp {
+        text-align: center !important;
+    }
 
-  #rsvp .download-btn {
-      display: block;
-      width: fit-content;
-      margin: 15px auto 0 !important;
-  }
+    #rsvp .download-btn {
+        display: inline-block !important;
+        margin: 15px auto 0 !important;
+        text-align: center !important;
+    }  @media (max-width: 600px) {
+        .download-btn {
+            padding: 10px 18px;
+            font-size: 0.85rem;
+            display: inline-block !important;
+            margin: 15px auto 0 !important;
+            text-align: center !important;
+        }
+    }
 
-  @media (max-width: 600px) {
-      .download-btn {
-          padding: 10px 18px;
-          font-size: 0.85rem;
-      }
-  }
+    @media (max-width: 768px) {
+        .download-btn {
+            display: inline-block !important;
+            margin: 15px auto 0 !important;
+            text-align: center !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .download-btn {
+            display: inline-block !important;
+            padding: 8px 16px;
+            font-size: 0.8rem;
+            margin: 12px auto 0 !important;
+            text-align: center !important;
+        }
+    }
 
   /* Scroll-triggered paragraph animations */
   .section p {
@@ -620,6 +638,8 @@ img {
           text-align: center !important;
       }
   }
+
+
 
 
 

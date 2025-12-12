@@ -402,6 +402,32 @@ document.addEventListener('DOMContentLoaded', function () {
         }, delay);
     });
 
+  // Download Button Centering Debug
+  function debugDownloadButton() {
+      const downloadBtn = document.querySelector('.download-btn');
+      if (downloadBtn) {
+          const rect = downloadBtn.getBoundingClientRect();
+          const computedStyle = window.getComputedStyle(downloadBtn);
+          const parentRect = downloadBtn.parentElement.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const parentCenterX = parentRect.left + parentRect.width / 2;
+          const offset = Math.abs(centerX - parentCenterX);
+          console.log('[Download-Btn] Width: ' + rect.width.toFixed(0) + 'px, Display: ' + computedStyle.display + ', Center-Offset: ' + offset.toFixed(0) + 'px (0=perfectly centered), Left: ' + rect.left.toFixed(0) + 'px');
+      }
+  }
+
+  if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+          setTimeout(debugDownloadButton, 500);
+      });
+  } else {
+      setTimeout(debugDownloadButton, 500);
+  }
+
+  window.addEventListener('resize', function() {
+      debugDownloadButton();
+  });
+
   // QR Code and Image Responsive Debugging
   function initImageDebugging() {
       const qrCode = document.querySelector('.qr-code');
@@ -527,6 +553,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return originalSetInnerHTML.call(this);
       }
   });});
+
 
 
 
