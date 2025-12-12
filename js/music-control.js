@@ -15,7 +15,7 @@
     btn.id = 'musicToggle';
     btn.setAttribute('aria-pressed', 'true');
     btn.title = 'Toggle background music';
-    
+
     // Heart shape styling
     btn.style.position = 'fixed';
     btn.style.right = '12px';
@@ -27,22 +27,24 @@
     btn.style.border = 'none';
     btn.style.background = 'transparent';
     btn.style.cursor = 'pointer';
-    btn.style.fontSize = '48px';
-    btn.style.lineHeight = '52px';
-    btn.style.textAlign = 'center';
     btn.style.padding = '0';
     btn.style.display = 'flex';
     btn.style.alignItems = 'center';
     btn.style.justifyContent = 'center';
     btn.style.transition = 'transform 0.2s ease';
 
+    // Create container for heart and icon overlay
+    btn.style.position = 'relative';
+
     function updateIcon() {
       if (music.paused) {
-        btn.textContent = '🖤';
+        // Paused state: black heart with play icon
+        btn.innerHTML = '<span style="font-size: 48px; line-height: 1;">🖤</span><span style="position: absolute; font-size: 20px; line-height: 1; opacity: 0.9;">▶️</span>';
         btn.setAttribute('aria-pressed', 'false');
         btn.style.transform = 'translateY(-50%) scale(0.9)';
       } else {
-        btn.textContent = '❤️';
+        // Playing state: red heart with pause icon
+        btn.innerHTML = '<span style="font-size: 48px; line-height: 1;">❤️</span><span style="position: absolute; font-size: 20px; line-height: 1; opacity: 0.9;">⏸️</span>';
         btn.setAttribute('aria-pressed', 'true');
         btn.style.transform = 'translateY(-50%) scale(1)';
       }
@@ -51,11 +53,12 @@
     btn.addEventListener('click', function (e) {
       e.stopPropagation();
       // Add a subtle pulse animation on click
-      btn.style.transform = btn.style.transform.replace('scale(1)', 'scale(1.2)').replace('scale(0.9)', 'scale(1.1)');
+      const currentTransform = btn.style.transform;
+      btn.style.transform = currentTransform.replace('scale(1)', 'scale(1.2)').replace('scale(0.9)', 'scale(1.1)');
       setTimeout(() => {
         updateIcon();
       }, 100);
-      
+
       if (music.paused) {
         music.play().catch(() => {});
       } else {
