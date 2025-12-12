@@ -378,7 +378,7 @@ img:not(.wedding-logo):not(.qr-code) {
     width: auto !important;
 /* Wedding logo - responsive sizing across all devices - DESKTOP */
   .wedding-logo {
-        max-width: 200px !important; width: 200px !important;
+        max-width: 400px !important; width: 400px !important;
         height: auto !important;
         margin: 5px auto 2px !important;
         display: block !important;
@@ -386,38 +386,38 @@ img:not(.wedding-logo):not(.qr-code) {
     }    /* Wedding logo - tablets (1024px and below) */
     @media (max-width: 1024px) {
         .wedding-logo {
-            max-width: 198px !important;
-       width: 198px !important;
+            max-width: 396px !important;
+       width: 396px !important;
         }
     }    /* Wedding logo - tablets (900px and below) */
     @media (max-width: 900px) {
         .wedding-logo {
-            max-width: 196px !important;
-       width: 196px !important;
+            max-width: 392px !important;
+       width: 392px !important;
         }
     }    /* Wedding logo - tablets (768px and below) */
     @media (max-width: 768px) {
         .wedding-logo {
-            max-width: 172px !important;
-       width: 172px !important;
+            max-width: 344px !important;
+       width: 344px !important;
         }
     }    /* Wedding logo - mobile (600px and below) */
     @media (max-width: 600px) {
         .wedding-logo {
-            max-width: 179px !important;
-       width: 179px !important;
+            max-width: 358px !important;
+       width: 358px !important;
         }
     }  /* Wedding logo - mobile (480px and below) */
     @media (max-width: 480px) {
         .wedding-logo {
-            max-width: 174px !important;
-       width: 174px !important;
+            max-width: 348px !important;
+       width: 348px !important;
         }
       }  /* Wedding logo - mobile (360px and below) */
     @media (max-width: 360px) {
         .wedding-logo {
-            max-width: 172px !important;
-       width: 172px !important;
+            max-width: 344px !important;
+       width: 344px !important;
         }
     }    /* QR Code Styling - Responsive and Centered */
     .qr-code {
@@ -849,6 +849,8 @@ img:not(.wedding-logo):not(.qr-code) {
     font-family: 'Montserrat', sans-serif !important;
     text-align: left !important;
 }
+
+
 
 
 
