@@ -40,8 +40,8 @@
         btn.setAttribute('aria-pressed', 'false');
         btn.style.transform = 'translateY(-50%) scale(0.9)';
       } else {
-        // Playing state: red heart with pause icon
-        btn.innerHTML = '<span style="font-size: 48px; line-height: 1;">❤️</span><span style="position: absolute; font-size: 20px; line-height: 1; opacity: 0.9;">⏸️</span>';
+        // Playing state: brown heart with pause icon
+        btn.innerHTML = '<span style="font-size: 48px; line-height: 1;">🤎</span><span style="position: absolute; font-size: 20px; line-height: 1; opacity: 0.9;">⏸️</span>';
         btn.setAttribute('aria-pressed', 'true');
         btn.style.transform = 'translateY(-50%) scale(1)';
       }
