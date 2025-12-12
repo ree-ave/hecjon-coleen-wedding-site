@@ -313,24 +313,22 @@ a:hover { text-decoration: underline; }
     transform: scale(0.98) translateY(0) !important;
 }
 
-/* Make the invite button match the site-wide header scale and script font */
-.invite-btn, #inviteBtn {
-    display: inline-block !important;
-    background: #f7d3d8 !important;
-    color: #5a3336 !important;
-    padding: 28px 56px !important;
-    border-radius: 14px !important;
-    font-family: 'Playfair Display', 'Luxurious Script','Great Vibes','Tangerine', serif, cursive !important;
-    font-size: 2.25rem !important;
-    text-decoration: none !important;
-    box-shadow: 0 12px 30px rgba(90,51,54,0.12) !important;
-    border: 2px solid rgba(90,51,54,0.06) !important;
-    line-height: 1 !important;
-    cursor: pointer !important;
-    transition: transform 0.32s cubic-bezier(.2,.9,.3,1), opacity 0.32s ease, box-shadow 0.22s ease !important;
-    will-change: transform, opacity !important;
-
-
+  /* Make the invite button match the site-wide header scale and script font */
+  .invite-btn, #inviteBtn {
+      display: inline-block !important;
+      background: transparent !important;
+      color: #5a3336 !important;
+      padding: 28px 56px !important;
+      border-radius: 14px !important;
+      font-family: 'Luxurious Script','Great Vibes','Tangerine', cursive !important;
+      font-size: 5.32rem !important;
+      text-decoration: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      line-height: 1 !important;
+      cursor: pointer !important;
+      transition: transform 0.32s cubic-bezier(.2,.9,.3,1), opacity 0.32s ease, box-shadow 0.22s ease !important;
+      will-change: transform, opacity !important;
 
 
 
