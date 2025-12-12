@@ -272,6 +272,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const invite = document.getElementById('inviteBtn');
     if (!invite) return;
 
+    // Ensure no inline styles block CSS animations
+    invite.style.removeProperty('display');
+    invite.style.removeProperty('background');
+    invite.style.removeProperty('color');
+    invite.style.removeProperty('padding');
+    invite.style.removeProperty('border-radius');
+    invite.style.removeProperty('font-family');
+    invite.style.removeProperty('font-size');
+    invite.style.removeProperty('text-decoration');
+    invite.style.removeProperty('box-shadow');
+    invite.style.removeProperty('border');
+
     // quick pressed feedback for touch/click
     invite.addEventListener('pointerdown', function () {
         invite.classList.add('invite-pressed');
