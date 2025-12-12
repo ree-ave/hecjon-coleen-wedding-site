@@ -388,22 +388,18 @@ img {
   }
 
   /* Wedding logo - mobile (480px and below) */
-  @media (max-width: 480px) {
-      .wedding-logo {
-          max-width: 460px !important;
-          width: 460px !important;
-      }
-  }
-
-  /* Wedding logo - mobile (360px and below) */
-  @media (max-width: 360px) {
-      .wedding-logo {
-          max-width: 450px !important;
-          width: 450px !important;
-      }
-  }
-
-    /* QR Code Styling - Responsive and Centered */
+    @media (max-width: 480px) {
+        .wedding-logo {
+            max-width: 410px !important;
+            width: 410px !important;
+        }
+    }  /* Wedding logo - mobile (360px and below) */
+    @media (max-width: 360px) {
+        .wedding-logo {
+            max-width: 400px !important;
+            width: 400px !important;
+        }
+    }    /* QR Code Styling - Responsive and Centered */
     .qr-code {
         display: block !important;
         max-width: 80px !important;
