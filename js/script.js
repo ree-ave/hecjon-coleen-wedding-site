@@ -402,6 +402,48 @@ document.addEventListener('DOMContentLoaded', function () {
         }, delay);
     });
 
+  // QR Code and Image Responsive Debugging
+  function initImageDebugging() {
+      const qrCode = document.querySelector('.qr-code');
+      if (qrCode) {
+          const updateQRDimensions = function() {
+              const rect = qrCode.getBoundingClientRect();
+              const computedStyle = window.getComputedStyle(qrCode);
+              console.log('[QR-Debug] Width: ' + rect.width.toFixed(0) + 'px, Height: ' + rect.height.toFixed(0) + 'px, Display: ' + computedStyle.display + ', Margin: ' + computedStyle.margin);
+          };
+          updateQRDimensions();
+          window.addEventListener('resize', updateQRDimensions);
+      }
+
+      // Log all images in sections
+      const sectionImages = document.querySelectorAll('.section img');
+      console.log('[Image-Debug] Found ' + sectionImages.length + ' images in sections');
+      sectionImages.forEach(function(img, idx) {
+          img.addEventListener('load', function() {
+              const rect = img.getBoundingClientRect();
+              console.log('[Image-Debug] Image ' + idx + ' loaded - Width: ' + rect.width.toFixed(0) + 'px, Height: ' + rect.height.toFixed(0) + 'px');
+          });
+      });
+  }
+
+  if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initImageDebugging);
+  } else {
+      initImageDebugging();
+  }
+
+  // Re-run image debugging on content injection
+  const originalSetInnerHTML = Element.prototype.innerHTML;
+  Object.defineProperty(Element.prototype, 'innerHTML', {
+      set: function(value) {
+          originalSetInnerHTML.call(this, value);
+          setTimeout(initImageDebugging, 100);
+      },
+      get: function() {
+          return originalSetInnerHTML.call(this);
+      }
+  });
+
   // Scroll-triggered paragraph animations (staggered per section)
   function initParagraphAnimations() {
       const paragraphs = document.querySelectorAll('.section p');

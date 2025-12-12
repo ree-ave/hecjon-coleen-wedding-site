@@ -403,72 +403,152 @@ img {
       }
   }
 
-    /* QR Code Styling */
-  .qr-code {
+    /* QR Code Styling - Responsive and Centered */
+    .qr-code {
         display: block !important;
-        max-width: 150px !important;
-        width: 150px !important;
+        max-width: 80px !important;
+        width: 80px !important;
         height: auto !important;
         margin: 20px auto !important;
-        text-align: center;
         border: 2px solid #8c7b64;
         padding: 10px;
         background-color: #ffffff;
-  }
+    }
 
-  /* Responsive QR code sizing */
-  @media (max-width: 1024px) {
+    /* Responsive QR code sizing */
+    @media (max-width: 1024px) {
         .qr-code {
+            max-width: 85px !important;
+            width: 85px !important;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .qr-code {
+            max-width: 85px !important;
+            width: 85px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .qr-code {
+            max-width: 70px !important;
+            width: 70px !important;
+            padding: 8px;
+            margin: 20px auto !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .qr-code {
+            max-width: 60px !important;
+            width: 60px !important;
+            padding: 6px;
+            margin: 15px auto !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .qr-code {
+            max-width: 60px !important;
+            width: 60px !important;
+            padding: 5px;
+            border: 1px solid #8c7b64;
+            margin: 12px auto !important;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .qr-code {
+            max-width: 55px !important;
+            width: 55px !important;
+            padding: 4px;
+            border: 1px solid #8c7b64;
+            margin: 10px auto !important;
+        }
+    }
+
+    /* Universal Responsive Image System for All Images */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+    }
+
+    /* Section-specific responsive images (not QR code) */
+    .section img:not(.qr-code):not(.wedding-logo) {
+        max-width: 100% !important;
+        width: auto !important;
+        height: auto !important;
+        margin: 20px auto !important;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: block;
+    }
+
+    /* Content images - responsive sizing */
+    .content-img {
+        max-width: 90% !important;
+        width: auto !important;
+        height: auto !important;
+        margin: 20px auto !important;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        .content-img {
+            max-width: 95% !important;
+            margin: 15px auto !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .content-img {
+            max-width: 100% !important;
+            margin: 12px auto !important;
+            border-radius: 4px;
+        }
+    }
+
+    /* Gallery images - responsive */
+    .gallery-img {
+        max-width: 100% !important;
+        width: auto !important;
+        height: auto !important;
+        display: block;
+    }
+
+    /* Header/logo images */
+    .header-img {
+        max-width: 100% !important;
+        width: auto !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Thumbnail images */
+    .thumbnail-img {
+        max-width: 200px !important;
+        width: auto !important;
+        height: auto !important;
+        display: block;
+        margin: 10px auto;
+    }
+
+    @media (max-width: 768px) {
+        .thumbnail-img {
+            max-width: 150px !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .thumbnail-img {
             max-width: 120px !important;
-            width: 120px !important;
-      }
-  }
-
-  @media (max-width: 900px) {
-        .qr-code {
-            max-width: 100px !important;
-            width: 100px !important;
-      }
-  }
-
-  @media (max-width: 768px) {
-        .qr-code {
-            max-width: 80px !important;
-            width: 80px !important;
-          padding: 8px;
-      }
-  }
-
-  @media (max-width: 600px) {
-        .qr-code {
-            max-width: 70px !important;
-            width: 70px !important;
-          padding: 6px;
-          margin: 15px auto !important;
-      }
-  }
-
-  @media (max-width: 480px) {
-        .qr-code {
-            max-width: 80px !important;
-            width: 80px !important;
-          padding: 5px;
-          border: 1px solid #8c7b64;
-          margin: 12px auto !important;
-      }
-  }
-
-  @media (max-width: 360px) {
-        .qr-code {
-            max-width: 70px !important;
-            width: 70px !important;
-          padding: 4px;
-          border: 1px solid #8c7b64;
-          margin: 10px auto !important;
-      }
-  }
-
-  /* Download button for QR code */
+        }
+    }  /* Download button for QR code */
   .download-btn {
         display: block;
         width: fit-content;
