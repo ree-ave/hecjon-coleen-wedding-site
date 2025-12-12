@@ -42,7 +42,11 @@ body {
       overflow-x: hidden !important;
 }
 
-p { margin-bottom: 1rem; text-align: center; }
+p { 
+  margin-bottom: 1rem; 
+  text-align: center; 
+  font-family: 'Garet', 'Lora', serif !important;
+}
 /* Headings: use Playfair Display and a consistent scale. */
 h1, h2, h3, h4, h5, h6 { text-align: center;
     font-family: 'Playfair Display', serif;
@@ -90,7 +94,10 @@ h1, h2, h3, h4, h5, h6 { text-align: center;
 
 
 
-p { margin-bottom: 1rem; }
+p { 
+  margin-bottom: 1rem; 
+  font-family: 'Garet', 'Lora', serif !important;
+}
 
 /* Ensure ALL headings are centered - applies to existing and future headings */
 h1, h2, h3, h4, h5, h6 {
@@ -108,7 +115,11 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 900px) { }
 
 
-p { margin-bottom: 1rem; text-align: center; }
+p { 
+  margin-bottom: 1rem; 
+  text-align: center; 
+  font-family: 'Garet', 'Lora', serif !important;
+}
 a { color: var(--color-primary); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -589,6 +600,7 @@ img {
         font-size: 1rem !important;
         line-height: 1.6 !important;
         margin-bottom: 15px !important;
+        font-family: 'Garet', 'Lora', serif !important;
     }
 
     @media (max-width: 600px) {
