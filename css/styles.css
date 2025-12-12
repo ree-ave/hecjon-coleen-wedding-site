@@ -831,3 +831,26 @@ img:not(.wedding-logo):not(.qr-code) {
 
 
 
+
+/* FAQ Section - Question Styling */
+#faq h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    color: var(--color-text) !important;
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+}
+
+/* FAQ Item Container */
+.faq-item {
+    margin-bottom: 30px !important;
+    padding: 15px 0 !important;
+}
+
+.faq-item p {
+    font-family: 'Montserrat', sans-serif !important;
+    text-align: left !important;
+}
