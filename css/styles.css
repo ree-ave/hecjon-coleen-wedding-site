@@ -820,3 +820,11 @@ img:not(.wedding-logo):not(.qr-code) {
 
 
 
+/* Music toggle button - floating on right side */
+#musicToggle {
+    position: fixed !important;
+    right: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10000 !important;
+}
