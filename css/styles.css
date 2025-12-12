@@ -633,7 +633,7 @@ img {
     /* Center the download button in RSVP section */
     #welcome {
         padding: 0 !important;
-        margin: 0 auto !important;
+        margin: 0 !important;
         border: none !important;
         background-color: transparent !important;
         border-radius: 0 !important;
@@ -641,6 +641,8 @@ img {
         justify-content: center !important;
         align-items: center !important;
         overflow: hidden !important;
+        max-width: 100vw !important;
+        width: 100vw !important;
     }
 
     #rsvp {
