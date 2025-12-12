@@ -33,9 +33,6 @@
     btn.style.justifyContent = 'center';
     btn.style.transition = 'transform 0.2s ease';
 
-    // Create container for heart and icon overlay
-    btn.style.position = 'relative';
-
     function updateIcon() {
       if (music.paused) {
         // Paused state: black heart with play icon
