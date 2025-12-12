@@ -405,43 +405,69 @@ document.addEventListener('DOMContentLoaded', function () {
   // Scroll-triggered paragraph animations (staggered per section)
   function initParagraphAnimations() {
       const paragraphs = document.querySelectorAll('.section p');
+      console.log('[Animation] Found ' + paragraphs.length + ' paragraphs to animate');
 
-      if (paragraphs.length === 0) return; // No paragraphs to animate
+      if (paragraphs.length === 0) {
+          console.log('[Animation] No paragraphs found, skipping animation setup');
+          return;
+      }
 
       const observerOptions = {
           threshold: 0.1,
-          rootMargin: '0px 0px -100px 0px' // Trigger when element is 100px from bottom of viewport
+          rootMargin: '0px 0px -100px 0px'
       };
 
       const observer = new IntersectionObserver(function(entries) {
           entries.forEach(entry => {
               if (entry.isIntersecting) {
-                  // Get the parent section and find this paragraph's index within it
                   const section = entry.target.closest('.section');
-                  if (!section) return;
+                  if (!section) {
+                      console.log('[Animation] Paragraph has no parent section');
+                      return;
+                  }
 
-                  // Only stagger paragraphs within their own section
                   const sectionParagraphs = Array.from(section.querySelectorAll('p'));
                   const indexInSection = sectionParagraphs.indexOf(entry.target);
-                  const delay = indexInSection * 100; // 100ms stagger within section
+                  const delay = indexInSection * 100;
+                  
+                  console.log('[Animation] Triggering paragraph animation with delay: ' + delay + 'ms');
 
                   setTimeout(() => {
                       entry.target.classList.add('visible');
+                      console.log('[Animation] Added .visible class to paragraph');
                   }, delay);
 
-                  observer.unobserve(entry.target); // Only animate once
+                  observer.unobserve(entry.target);
               }
           });
       }, observerOptions);
 
       paragraphs.forEach(p => observer.observe(p));
+      console.log('[Animation] Paragraph observer started, observing ' + paragraphs.length + ' paragraphs');
+
+      // Fallback: if paragraphs aren't animated within 3 seconds, force them visible
+      setTimeout(function() {
+          const nonVisibleParagraphs = document.querySelectorAll('.section p:not(.visible)');
+          if (nonVisibleParagraphs.length > 0) {
+              console.log('[Animation] FALLBACK: Forcing ' + nonVisibleParagraphs.length + ' paragraphs to visible');
+              nonVisibleParagraphs.forEach(function(p, index) {
+                  setTimeout(function() {
+                      p.classList.add('visible');
+                  }, index * 100);
+              });
+          }
+      }, 3000);
   }
 
   // Run on DOMContentLoaded (for direct page load)
   if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initParagraphAnimations);
+      console.log('[Animation] DOM loading, waiting for DOMContentLoaded');
+      document.addEventListener('DOMContentLoaded', function() {
+          console.log('[Animation] DOMContentLoaded fired, initializing animations');
+          initParagraphAnimations();
+      });
   } else {
-      // DOM is already ready (happens when content is dynamically injected)
+      console.log('[Animation] DOM already ready (readyState: ' + document.readyState + '), initializing animations immediately');
       initParagraphAnimations();
   }
 
@@ -450,8 +476,10 @@ document.addEventListener('DOMContentLoaded', function () {
   Object.defineProperty(Element.prototype, 'innerHTML', {
       set: function(value) {
           originalSetInnerHTML.call(this, value);
-          // Re-run animations after DOM update
-          setTimeout(initParagraphAnimations, 100);
+          console.log('[Animation] Content injected via innerHTML, re-running animation init');
+          setTimeout(function() {
+              initParagraphAnimations();
+          }, 100);
       },
       get: function() {
           return originalSetInnerHTML.call(this);
