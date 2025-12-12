@@ -403,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   // Scroll-triggered paragraph animations (staggered per section)
-  document.addEventListener('DOMContentLoaded', function() {
+  function initParagraphAnimations() {
       const paragraphs = document.querySelectorAll('.section p');
 
       if (paragraphs.length === 0) return; // No paragraphs to animate
@@ -419,7 +419,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   // Get the parent section and find this paragraph's index within it
                   const section = entry.target.closest('.section');
                   if (!section) return;
-                  
+
                   // Only stagger paragraphs within their own section
                   const sectionParagraphs = Array.from(section.querySelectorAll('p'));
                   const indexInSection = sectionParagraphs.indexOf(entry.target);
@@ -435,6 +435,27 @@ document.addEventListener('DOMContentLoaded', function () {
       }, observerOptions);
 
       paragraphs.forEach(p => observer.observe(p));
+  }
+
+  // Run on DOMContentLoaded (for direct page load)
+  if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initParagraphAnimations);
+  } else {
+      // DOM is already ready (happens when content is dynamically injected)
+      initParagraphAnimations();
+  }
+
+  // Also re-run if content is injected (for dynamic loading)
+  const originalSetInnerHTML = Element.prototype.innerHTML;
+  Object.defineProperty(Element.prototype, 'innerHTML', {
+      set: function(value) {
+          originalSetInnerHTML.call(this, value);
+          // Re-run animations after DOM update
+          setTimeout(initParagraphAnimations, 100);
+      },
+      get: function() {
+          return originalSetInnerHTML.call(this);
+      }
   });});
 
 
