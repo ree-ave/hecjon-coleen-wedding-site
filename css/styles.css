@@ -438,49 +438,49 @@ img {
     /* Welcome Banner - Responsive and Non-Cropping */
     .welcome-banner {
         display: block !important;
-        max-width: 100% !important;
-        width: 100% !important;
+        max-width: 90vw !important;
+        width: 90vw !important;
         height: auto !important;
-        margin: 0 !important;
+        margin: 0 auto !important;
         padding: 0 !important;
         object-fit: contain !important;
         border-radius: 0 !important;
         box-shadow: none !important;
-        min-height: 200px !important;
+        min-height: auto !important;
     }
 
     @media (max-width: 1024px) {
         .welcome-banner {
-            max-width: 100% !important;
-            width: 100% !important;
+            max-width: 90vw !important;
+            width: 90vw !important;
         }
     }
 
     @media (max-width: 768px) {
         .welcome-banner {
-            max-width: 100% !important;
-            width: 100% !important;
+            max-width: 90vw !important;
+            width: 90vw !important;
         }
     }
 
     @media (max-width: 600px) {
         .welcome-banner {
-            max-width: 100% !important;
-            width: 100% !important;
+            max-width: 90vw !important;
+            width: 90vw !important;
         }
     }
 
     @media (max-width: 480px) {
         .welcome-banner {
-            max-width: 100% !important;
-            width: 100% !important;
+            max-width: 90vw !important;
+            width: 90vw !important;
         }
     }
 
     @media (max-width: 360px) {
         .welcome-banner {
-            max-width: 100% !important;
-            width: 100% !important;
+            max-width: 90vw !important;
+            width: 90vw !important;
         }
     }
 
@@ -633,10 +633,14 @@ img {
     /* Center the download button in RSVP section */
     #welcome {
         padding: 0 !important;
-        margin: 0 !important;
+        margin: 0 auto !important;
         border: none !important;
         background-color: transparent !important;
         border-radius: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        overflow: hidden !important;
     }
 
     #rsvp {
