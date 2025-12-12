@@ -412,14 +412,14 @@ img {
   /* Wedding logo - mobile (480px and below) */
     @media (max-width: 480px) {
         .wedding-logo {
-            max-width: 410px !important;
-            width: 410px !important;
+            max-width: 360px !important;
+            width: 360px !important;
         }
     }  /* Wedding logo - mobile (360px and below) */
     @media (max-width: 360px) {
         .wedding-logo {
-            max-width: 400px !important;
-            width: 400px !important;
+            max-width: 350px !important;
+            width: 350px !important;
         }
     }    /* QR Code Styling - Responsive and Centered */
     .qr-code {
