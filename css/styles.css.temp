@@ -248,7 +248,7 @@ a:hover { text-decoration: underline; }
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
-.gallery-img:not(.wedding-logo):not(.qr-code) {
+.gallery-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -280,7 +280,7 @@ a:hover { text-decoration: underline; }
 }
 
 /* Images */
-.rtl-track img:not(.wedding-logo):not(.qr-code) {
+.rtl-track img {
     width: 240px;           /* adjust as needed or use max-width */
     height: auto;
     object-fit: cover;
@@ -303,7 +303,7 @@ a:hover { text-decoration: underline; }
 
 /* Small screens: smaller images */
 @media (max-width: 600px) {
-    .rtl-track img:not(.wedding-logo):not(.qr-code) { width: 140px; }
+    .rtl-track img { width: 140px; }
 }
 
 
@@ -371,14 +371,14 @@ a:hover { text-decoration: underline; }
 
 
 
-/* Universal image centering for all images - EXCLUDES wedding logo and QR code */
+/* Universal image centering for all images (current and future) - EXCLUDES logo and QR */
 img:not(.wedding-logo):not(.qr-code) {
     display: block !important;
     margin: 15px auto !important;
     height: auto !important;
     max-width: 100% !important;
     width: auto !important;
-img:not(.wedding-logo):not(.qr-code) {
+}
 
   /* Wedding logo - responsive sizing across all devices - DESKTOP */
   .wedding-logo {
@@ -495,7 +495,7 @@ img:not(.wedding-logo):not(.qr-code) {
     }
 
     /* Content images - responsive sizing */
-    .content-img:not(.wedding-logo):not(.qr-code) {
+    .content-img {
         max-width: 90% !important;
         width: auto !important;
         height: auto !important;
@@ -506,14 +506,14 @@ img:not(.wedding-logo):not(.qr-code) {
     }
 
     @media (max-width: 768px) {
-        .content-img:not(.wedding-logo):not(.qr-code) {
+        .content-img {
             max-width: 95% !important;
             margin: 15px auto !important;
         }
     }
 
     @media (max-width: 480px) {
-        .content-img:not(.wedding-logo):not(.qr-code) {
+        .content-img {
             max-width: 100% !important;
             margin: 12px auto !important;
             border-radius: 4px;
@@ -521,7 +521,7 @@ img:not(.wedding-logo):not(.qr-code) {
     }
 
     /* Gallery images - responsive */
-    .gallery-img:not(.wedding-logo):not(.qr-code) {
+    .gallery-img {
         max-width: 100% !important;
         width: auto !important;
         height: auto !important;
@@ -529,7 +529,7 @@ img:not(.wedding-logo):not(.qr-code) {
     }
 
     /* Header/logo images */
-    .header-img:not(.wedding-logo):not(.qr-code) {
+    .header-img {
         max-width: 100% !important;
         width: auto !important;
         height: auto !important;
@@ -538,7 +538,7 @@ img:not(.wedding-logo):not(.qr-code) {
     }
 
     /* Thumbnail images */
-    .thumbnail-img:not(.wedding-logo):not(.qr-code) {
+    .thumbnail-img {
         max-width: 200px !important;
         width: auto !important;
         height: auto !important;
@@ -547,13 +547,13 @@ img:not(.wedding-logo):not(.qr-code) {
     }
 
     @media (max-width: 768px) {
-        .thumbnail-img:not(.wedding-logo):not(.qr-code) {
+        .thumbnail-img {
             max-width: 150px !important;
         }
     }
 
     @media (max-width: 480px) {
-        .thumbnail-img:not(.wedding-logo):not(.qr-code) {
+        .thumbnail-img {
             max-width: 120px !important;
         }
       }  /* Download button for QR code */
