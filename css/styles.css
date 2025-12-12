@@ -706,3 +706,93 @@ img {
 
 
 
+
+/* ===== MOBILE CENTERING & RSVP FIXES ===== */
+
+/* Ensure section stays properly centered and smaller on mobile */
+@media (max-width: 768px) {
+    .section {
+        max-width: 100% !important;
+        padding: 40px 15px !important;
+        margin: 15px auto !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        max-width: 100% !important;
+        padding: 35px 12px !important;
+        margin: 12px auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        max-width: 100% !important;
+        padding: 30px 10px !important;
+        margin: 10px auto !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .section {
+        max-width: 100% !important;
+        padding: 25px 8px !important;
+        margin: 8px auto !important;
+    }
+}
+
+/* Container mobile centering */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100% !important;
+        padding: 15px !important;
+        width: 100% !important;
+    }
+}
+
+/* RSVP section - ensure full centering and reduce QR image padding */
+@media (max-width: 600px) {
+    #rsvp {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    #rsvp .qr-code {
+        padding: 4px !important;
+        margin: 12px auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #rsvp {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    #rsvp .qr-code {
+        padding: 3px !important;
+        margin: 10px auto !important;
+    }
+}
+
+@media (max-width: 360px) {
+    #rsvp {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    #rsvp .qr-code {
+        padding: 2px !important;
+        margin: 8px auto !important;
+    }
+}
