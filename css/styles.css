@@ -389,32 +389,38 @@ img:not(.wedding-logo):not(.qr-code) {
     }    /* Wedding logo - tablets (1024px and below) */
     @media (max-width: 1024px) {
         .wedding-logo {
-            max-width: 48px !important;`n           width: 48px !important;
+            max-width: 48px !important;
+       width: 48px !important;
         }
     }    /* Wedding logo - tablets (900px and below) */
     @media (max-width: 900px) {
         .wedding-logo {
-            max-width: 46px !important;`n           width: 46px !important;
+            max-width: 46px !important;
+       width: 46px !important;
         }
     }    /* Wedding logo - tablets (768px and below) */
     @media (max-width: 768px) {
         .wedding-logo {
-            max-width: 22px !important;`n           width: 22px !important;
+            max-width: 22px !important;
+       width: 22px !important;
         }
     }    /* Wedding logo - mobile (600px and below) */
     @media (max-width: 600px) {
         .wedding-logo {
-            max-width: 29px !important;`n           width: 29px !important;
+            max-width: 29px !important;
+       width: 29px !important;
         }
     }  /* Wedding logo - mobile (480px and below) */
     @media (max-width: 480px) {
         .wedding-logo {
-            max-width: 24px !important;`n           width: 24px !important;
+            max-width: 24px !important;
+       width: 24px !important;
         }
       }  /* Wedding logo - mobile (360px and below) */
     @media (max-width: 360px) {
         .wedding-logo {
-            max-width: 22px !important;`n           width: 22px !important;
+            max-width: 22px !important;
+       width: 22px !important;
         }
     }    /* QR Code Styling - Responsive and Centered */
     .qr-code {
@@ -846,5 +852,7 @@ img:not(.wedding-logo):not(.qr-code) {
     font-family: 'Montserrat', sans-serif !important;
     text-align: left !important;
 }
+
+
 
 
