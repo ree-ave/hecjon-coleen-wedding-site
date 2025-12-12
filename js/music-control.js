@@ -4,10 +4,15 @@
     const music = document.getElementById('bgMusic');
     if (!music) return;
 
+    // Set volume and attempt to autoplay
+    if (!music.volume) {
+      music.volume = 0.45;
+    }
+
     // Create toggle button
     const btn = document.createElement('button');
     btn.id = 'musicToggle';
-    btn.setAttribute('aria-pressed', 'false');
+    btn.setAttribute('aria-pressed', 'true');
     btn.title = 'Toggle background music';
     // Float vertically centered on the right side
     btn.style.position = 'fixed';
@@ -51,8 +56,18 @@
     // Insert button into body
     document.body.appendChild(btn);
 
-    // Initial state
-    updateIcon();
+    // Attempt to play music immediately
+    const playPromise = music.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        updateIcon();
+      }).catch(err => {
+        console.log('Autoplay prevented:', err);
+        updateIcon();
+      });
+    } else {
+      updateIcon();
+    }
   }
 
   if (document.readyState === 'loading') {
