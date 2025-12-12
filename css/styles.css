@@ -309,11 +309,25 @@ a:hover { text-decoration: underline; }
     box-shadow: 0 6px 18px rgba(90,51,54,0.06) !important;
 }
 
-#inviteBtn.invite-pressed {
-    transform: scale(0.98) translateY(0) !important;
-}
+  #inviteBtn.invite-pressed {
+      transform: scale(0.98) translateY(0) !important;
+  }
 
-  /* Make the invite button match the site-wide header scale and script font */
+  /* Invite page exit animation - zoom out and fade */
+  .invite-exit {
+      animation: invite-zoom-exit 0.34s cubic-bezier(0.2, 0.9, 0.3, 1) forwards !important;
+  }
+
+  @keyframes invite-zoom-exit {
+      from {
+          opacity: 1;
+          transform: scale(1);
+      }
+      to {
+          opacity: 0;
+          transform: scale(1.05);
+      }
+  }  /* Make the invite button match the site-wide header scale and script font */
   .invite-btn, #inviteBtn {
       display: inline-block !important;
       background: transparent !important;
