@@ -446,6 +446,7 @@ img {
         object-fit: contain !important;
         border-radius: 0 !important;
         box-shadow: none !important;
+        min-height: 200px !important;
     }
 
     @media (max-width: 1024px) {

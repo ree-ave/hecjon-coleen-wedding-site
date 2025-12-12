@@ -295,6 +295,8 @@ document.addEventListener('DOMContentLoaded', function () {
     invite.addEventListener('click', function (e) {
         // prevent immediate navigation so animation can play
         e.preventDefault();
+        // Set flag to play music on main page
+        window._inviteClicked = true;
         // play subtle entrance animation
         invite.classList.add('invite-clicked');
         
