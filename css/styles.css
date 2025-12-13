@@ -872,7 +872,7 @@ img:not(.wedding-logo):not(.qr-code):not(.gifts-qr) {
 
 
 @media (max-width: 900px) {
-    #timeline-img {
-        max-width: 700px !important;
+    #timeline-img { max-width: 750px !important;
     }
 }
+
