@@ -35,8 +35,8 @@
 
     function updateIcon() {
       if (music.paused) {
-        // Paused state: black heart with play icon
-        btn.innerHTML = '<span style="font-size: 48px; line-height: 1;">🖤</span><span style="position: absolute; font-size: 20px; line-height: 1; opacity: 0.9;">▶️</span>';
+        // Paused state: white heart with play icon
+        btn.innerHTML = '<span style="font-size: 48px; line-height: 1;">🤍</span><span style="position: absolute; font-size: 20px; line-height: 1; opacity: 0.9;">▶️</span>';
         btn.setAttribute('aria-pressed', 'false');
         btn.style.transform = 'translateY(-50%) scale(0.9)';
       } else {
