@@ -218,10 +218,15 @@ a:hover { text-decoration: underline; }
     overflow: visible;
 }
 
+/* Welcome section - white satin background */
+#welcome {
+    background-color: #ffffff;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="2"/><feColorMatrix type="saturate" values="0.3"/></filter><rect width="100" height="100" fill="white" filter="url(%23noise)"/></svg>');
+    background-attachment: fixed;
+}
+
   .hero-section {
-      background-color: #ffffff;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="2"/><feColorMatrix type="saturate" values="0.3"/></filter><rect width="100" height="100" fill="white" filter="url(%23noise)"/></svg>');
-      background-attachment: fixed;
+      background-color: transparent;
       display: flex;
       flex-direction: column;
       align-items: center;
