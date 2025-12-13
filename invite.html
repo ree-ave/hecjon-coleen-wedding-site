@@ -95,7 +95,7 @@
                         <!-- Landing page: single 'You're invited!' button -->
                         <main style="height:100vh; display:flex; align-items:center; justify-content:center; background: linear-gradient(180deg, #fff2f4 0%, #fffaf0 100%);">
                             <div style="text-align:center; max-width:720px; padding:20px;">
-                                <a href="index.html" id="inviteBtn">You're invited!</a>
+                                <button id="inviteBtn" onclick="window._inviteClicked = true; setTimeout(() => window.location.href = 'main.html', 300);" style="background-color: var(--color-primary); color: white; padding: 20px 40px; border: none; border-radius: 8px; font-size: 1.2rem; cursor: pointer; font-weight: bold; transition: transform 0.2s ease; font-family: 'Playfair Display', serif;">▶️ You're Invited!</button>
                                 <p style="margin-top:18px; color:#7b6b66; font-family: 'Lora', serif;">Click to enter the wedding site</p>
                             </div>
                         </main>
@@ -190,6 +190,8 @@
     </audio>
 </body>
 </html>
+
+
 
 
 
