@@ -420,65 +420,8 @@ img:not(.wedding-logo):not(.qr-code) {
        width: 344px !important;
         }
     }    /* QR Code Styling - Responsive and Centered */
-    .qr-code {
-        display: block !important;
-        max-width: 80px !important;
-        width: 80px !important;
-        height: auto !important;
-        margin: 20px auto !important;
-        border: 2px solid #8c7b64 !important;
-        padding: 10px !important;
-        background-color: #ffffff !important;
-    }
-
-    /* Responsive QR code sizing */
-    @media (max-width: 1024px) {
-        .qr-code {
-            max-width: 85px !important;
-            width: 85px !important;
-        }
-    }
-
-    @media (max-width: 900px) {
-        .qr-code {
-            max-width: 85px !important;
-            width: 85px !important;
-        }
-    }
-
-      @media (max-width: 768px) {
-          .qr-code {
-              max-width: 50px !important;
-              width: 50px !important;
-              padding: 6px !important;
-              margin: 15px auto 20px !important;
-              border: 2px solid #8c7b64 !important;
-          }
-      }      @media (max-width: 600px) {
-          .qr-code {
-              max-width: 60px !important;
-              width: 60px !important;
-              padding: 6px !important;
-              margin: 15px auto 20px !important;
-              border: 2px solid #8c7b64 !important;
-          }
-      }      @media (max-width: 480px) {
-          .qr-code {
-              max-width: 60px !important;
-              width: 60px !important;
-              padding: 5px !important;
-              border: 2px solid #8c7b64 !important;
-              margin: 15px auto 20px !important;
-          }
-      }      @media (max-width: 360px) {
-          .qr-code {
-              max-width: 50px !important;
-              width: 50px !important;
-              padding: 3px !important;
-              border: 1px solid #8c7b64 !important;
-              margin: 12px auto 18px !important;
-          }
-      }    /* Section-specific responsive images (not QR code) */
+    /* Section-specific responsive images (not QR code) */
+}    /* Section-specific responsive images (not QR code) */
     .section img:not(.qr-code):not(.wedding-logo) {
         max-width: 100% !important;
         width: auto !important;
@@ -753,11 +696,7 @@ img:not(.wedding-logo):not(.qr-code) {
         width: 100% !important;
     }
     
-    #rsvp .qr-code {
-        padding: 4px !important;
-        margin: 12px auto !important;
     }
-}
 
 @media (max-width: 480px) {
     #rsvp {
@@ -779,11 +718,7 @@ img:not(.wedding-logo):not(.qr-code) {
         margin-bottom: 8px !important;
     }
 
-    #rsvp .qr-code {
-        padding: 3px !important;
-        margin: 10px auto !important;
-    }
-}@media (max-width: 360px) {
+    }@media (max-width: 360px) {
    #rsvp {
        display: flex !important;
        flex-direction: column !important;
@@ -803,11 +738,7 @@ img:not(.wedding-logo):not(.qr-code) {
        margin-bottom: 6px !important;
    }
    
-   #rsvp .qr-code {
-       padding: 2px !important;
-       margin: 8px auto !important;
    }
-}
 
 
 
@@ -873,6 +804,8 @@ img:not(.wedding-logo):not(.qr-code) {
     font-family: 'Montserrat', sans-serif !important;
     text-align: left !important;
 }
+
+
 
 
 

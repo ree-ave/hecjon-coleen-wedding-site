@@ -113,4 +113,40 @@
   } else {
     initMusicControl();
   }
+
+  // QR Code Button Handlers
+  const openRsvpQrBtn = document.getElementById('openRsvpQr');
+  const downloadRsvpQrBtn = document.getElementById('downloadRsvpQr');
+  
+  if (openRsvpQrBtn) {
+    openRsvpQrBtn.addEventListener('click', function() {
+      const modal = document.createElement('div');
+      modal.style.cssText = `
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); display: flex;
+        align-items: center; justify-content: center; z-index: 10001;
+      `;
+      
+      const img = document.createElement('img');
+      img.src = 'images/qr_folder/qr_rsvp.png';
+      img.alt = 'RSVP QR Code';
+      img.style.cssText = 'max-width: 90%; max-height: 90%; border-radius: 8px;';
+      
+      modal.appendChild(img);
+      modal.addEventListener('click', function() {
+        document.body.removeChild(modal);
+      });
+      
+      document.body.appendChild(modal);
+    });
+  }
+  
+  if (downloadRsvpQrBtn) {
+    downloadRsvpQrBtn.addEventListener('click', function() {
+      const link = document.createElement('a');
+      link.href = 'images/qr_folder/qr_rsvp.png';
+      link.download = 'RSVP_QR_Code.png';
+      link.click();
+    });
+  }
 })();
