@@ -218,13 +218,8 @@ a:hover { text-decoration: underline; }
     overflow: visible;
 }
 
-/* Welcome section - displays body's satin background */
+/* Welcome section */
 #welcome {
-    background-image: url('images/wedding_bg/white_satin.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-    background-repeat: repeat;
     padding: 40px 20px;
     margin: 20px auto;
     max-width: 900px;
