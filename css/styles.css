@@ -220,9 +220,15 @@ a:hover { text-decoration: underline; }
 
 /* Welcome section - displays body's satin background */
 #welcome {
-    background-color: transparent;
+    background-image: url('images/wedding_bg/white_satin.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     padding: 40px 20px;
-    margin: 20px 0;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
 }
 
   .hero-section {
