@@ -545,7 +545,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   }, index * 100);
               });
           }
-      }, 3000);
+      }, 10000);
   }
 
   // Run on DOMContentLoaded (for direct page load)
@@ -574,6 +574,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return originalSetInnerHTML.call(this);
       }
   });});
+
 
 
 
