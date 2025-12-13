@@ -378,7 +378,7 @@ img:not(.wedding-logo):not(.qr-code) {
     width: auto !important;
 /* Wedding logo - responsive sizing across all devices - DESKTOP */
   .wedding-logo {
-        max-width: 400px !important; width: 400px !important;
+        max-width: 450px !important; width: 450px !important;
         height: auto !important;
         margin: 5px auto 2px !important;
         display: block !important;
@@ -386,14 +386,14 @@ img:not(.wedding-logo):not(.qr-code) {
     }    /* Wedding logo - tablets (1024px and below) */
     @media (max-width: 1024px) {
         .wedding-logo {
-            max-width: 396px !important;
-       width: 396px !important;
+            max-width: 446px !important;
+       width: 446px !important;
         }
     }    /* Wedding logo - tablets (900px and below) */
     @media (max-width: 900px) {
         .wedding-logo {
-            max-width: 392px !important;
-       width: 392px !important;
+            max-width: 442px !important;
+       width: 442px !important;
         }
     }    /* Wedding logo - tablets (768px and below) */
     @media (max-width: 768px) {
@@ -849,6 +849,7 @@ img:not(.wedding-logo):not(.qr-code) {
     font-family: 'Montserrat', sans-serif !important;
     text-align: left !important;
 }
+
 
 
 
