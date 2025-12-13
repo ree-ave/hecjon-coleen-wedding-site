@@ -40,6 +40,15 @@ body {
       min-height: 100vh;
       max-width: 100vw !important;
       overflow-x: hidden !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
 }
 
 p { 
@@ -238,6 +247,7 @@ a:hover { text-decoration: underline; }
       padding: 100px 20px;
       overflow: hidden;
       width: 100%;
+      margin: 0 auto;
   }/* Ensure hero section headings don't get taupe background */
 .hero-section h1,
 .hero-section h2,
