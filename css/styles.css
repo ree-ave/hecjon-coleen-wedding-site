@@ -588,20 +588,26 @@ img:not(.wedding-logo):not(.qr-code) {
         font-family: 'Montserrat', sans-serif !important;
     }
 
-    @media (max-width: 600px) {
-        #rsvp p {
-            font-size: 0.95rem !important;
-            line-height: 1.5 !important;
-            margin-bottom: 12px !important;
-        }
-    }
-
-    @media (max-width: 480px) {
-        #rsvp p {
-            font-size: 0.9rem !important;
-            line-height: 1.5 !important;
-            margin-bottom: 10px !important;
-        }
+@media (max-width: 600px) {
+   #rsvp {
+       max-width: 360px !important;
+       padding: 30px 15px !important;
+       margin: 10px auto !important;
+   }
+   #rsvp h2 {
+       font-size: 1.5rem !important;
+   }
+   #rsvp p {
+       font-size: 0.85rem !important;
+       line-height: 1.5 !important;
+       margin-bottom: 10px !important;
+   }
+}    @media (max-width: 480px) {
+       #rsvp p {
+           font-size: 0.8rem !important;
+           line-height: 1.4 !important;
+           margin-bottom: 8px !important;
+       }
     }  @media (max-width: 768px) {
         .download-btn {
             display: block !important;
@@ -760,30 +766,48 @@ img:not(.wedding-logo):not(.qr-code) {
         align-items: center !important;
         justify-content: center !important;
         width: 100% !important;
+        max-width: 348px !important;
+        padding: 25px 12px !important;
+        margin: 10px auto !important;
     }
-    
+    #rsvp h2 {
+        font-size: 1.4rem !important;
+    }
+    #rsvp p {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
+    }
+
     #rsvp .qr-code {
         padding: 3px !important;
         margin: 10px auto !important;
     }
+}@media (max-width: 360px) {
+   #rsvp {
+       display: flex !important;
+       flex-direction: column !important;
+       align-items: center !important;
+       justify-content: center !important;
+       width: 100% !important;
+       max-width: 344px !important;
+       padding: 20px 10px !important;
+       margin: 8px auto !important;
+   }
+   #rsvp h2 {
+       font-size: 1.3rem !important;
+   }
+   #rsvp p {
+       font-size: 0.75rem !important;
+       line-height: 1.4 !important;
+       margin-bottom: 6px !important;
+   }
+   
+   #rsvp .qr-code {
+       padding: 2px !important;
+       margin: 8px auto !important;
+   }
 }
-
-@media (max-width: 360px) {
-    #rsvp {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        width: 100% !important;
-    }
-    
-    #rsvp .qr-code {
-        padding: 2px !important;
-        margin: 8px auto !important;
-    }
-}
-
-
 
 
 
