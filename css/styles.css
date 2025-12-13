@@ -218,13 +218,11 @@ a:hover { text-decoration: underline; }
     overflow: visible;
 }
 
-/* Welcome section - white satin background */
+/* Welcome section - displays body's satin background */
 #welcome {
-    background-color: #ffffff;
+    background-color: transparent;
     padding: 40px 20px;
     margin: 20px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
 }
 
   .hero-section {
