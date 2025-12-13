@@ -388,7 +388,8 @@ img:not(.wedding-logo):not(.qr-code):not(.gifts-qr) {
     width: auto !important;
 /* Wedding logo - responsive sizing across all devices - DESKTOP */
   .wedding-logo {
-        max-width: 550px !important; width: 550px !important;
+        max-width: 550px !important; 
+        width: 550px !important;
         height: auto !important;
         margin: 5px auto 2px !important;
         display: block !important;
