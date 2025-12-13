@@ -223,11 +223,13 @@ a:hover { text-decoration: underline; }
     background-image: url('images/wedding_bg/white_satin.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-repeat: repeat;
     padding: 40px 20px;
     margin: 20px auto;
     max-width: 900px;
+    text-align: center;
+}
     text-align: center;
 }
 
