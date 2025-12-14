@@ -20,7 +20,7 @@ html {
 
 :root {
     --color-primary: #73816a; /* Sage Green */
-    --color-secondary: #8c7b64; /* Taupe/Brown */
+    --color-secondary: #8F675D; /* Taupe/Brown */
     --color-accent: #d4bf9e; /* Champagne */
     --color-background: #ffffff; /* White */
     --color-text: #4b4b4b; /* Dark Gray for readability */
@@ -878,5 +878,6 @@ img:not(.wedding-logo):not(.qr-code):not(.gifts-qr) {
     #timeline-img { max-width: 750px !important;
     }
 }
+
 
 
