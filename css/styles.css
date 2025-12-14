@@ -106,11 +106,17 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    background-color: #8c7b64;
     color: #f5f1e8;
     box-sizing: border-box;
     font-size: 1.8rem !important;
     font-family: 'Luxurious Script', 'Great Vibes', 'Tangerine', cursive !important;
+    position: relative;
+}
+
+/* Countdown heading background */
+.countdown-heading {
+    background-color: #8F675D;
+    z-index: 1;
 }
 /* Responsive reductions for headings to keep layout usable on smaller screens */
 @media (max-width: 900px) { }
@@ -509,7 +515,7 @@ img:not(.wedding-logo):not(.qr-code):not(.gifts-qr) {
           display: block !important;
           width: fit-content !important;
           margin: 0 auto 15px !important;
-          background-color: #8c7b64;
+          background-color: #8F675D;
           color: #f5f1e8;
           padding: 12px 24px;
           border-radius: 6px;
