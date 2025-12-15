@@ -3,119 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title>You're Invited — Hecjon & Coleen</title>
+    <title>Hecjon & Coleen - The Wedding</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Lora&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20251212q">
-    <style>
-        html { height: 100%; }
-        body.invite-locked { height: 100%; margin: 0; overflow: hidden; position: fixed; width: 100%; overscroll-behavior: none; -webkit-overflow-scrolling: auto; }
-        .invite-wrap { height: 100vh; display: flex; align-items: center; justify-content: center; background: url('images/wedding_bg/weddingsite_bg.jpg') center/cover no-repeat; }
-        .invite-card { width: 100vw; padding: 30px; text-align: center; background: rgba(212, 191, 158, 0.7); display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .invite-btn { display: inline-block; background: transparent; color: #5a3336; padding: 28px 56px; border-radius: 14px; font-family: 'Luxurious Script','Great Vibes','Tangerine', cursive; font-size: 5.32rem; text-decoration: none; box-shadow: none; border: none; }
-        .invite-sub { margin-top: 18px; color: #7b6b66; font-family: 'Lora', serif; }
-          
-          /* Zoom fade out transition when leaving invite page */
-          .invite-wrap {
-              transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.6s ease-out;
-          }
-          .invite-wrap.invite-exit {
-              transform: scale(1.2) translateZ(0);
-              opacity: 0;
-          }
-        @media (min-width: 900px) { 
-            body.invite-locked { position: static; overflow: visible; } 
-        }
-    </style>
-</head>
-<body class="invite-locked">
-    <audio id="bgMusic" src="audio/Sa Bawat Sandali - Amiel Sol (Official Music Video).mp3" loop preload="auto"></audio>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     
-    <main class="invite-wrap">
-        <div class="invite-card">
-            <a href="main.html" id="inviteBtn" class="invite-btn">You're invited!</a>
-            <p class="invite-sub">Two are better than one... If either of them falls down, one can help the other up... A cord of three strands is not quickly broken. -Ecclesiastes 4:9-12</p>
-        </div>
-    </main>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-    <script src="js/script.js"></script>
-    <script src="js/restore-scroll.js"></script>
-    <script src="js/fix-dropdown.js" defer></script>
+    <header class="hero-section">
+        <img src="images/wedding_logo.png" alt="Hecjon & Coleen" class="wedding-logo">
+        <p class="hero-invited">You're Invited!</p>
+        <div class="hero-divider"></div>
+        <p class="hero-subtitle">The Wedding</p>
+        <p class="hero-date">FEBRUARY 8, 2026</p>
+    </header>
+
+    <main class="container">
+        
+        <section id="welcome" class="section">
+            <h2>Welcome</h2>
+            <p>We're so happy you're here. This space is your guide to the celebration—how to get there, what to wear, and how to confirm your presence. We can't wait to celebrate this unforgettable moment with our favorite people.</p>
+        </section>
+
+        <section id="countdown-section">
+            <h2 class="countdown-heading">Our Big Day Awaits!</h2>
+            <div id="countdownContainer" class="countdown-container">
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="cd-days">0</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="cd-hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="cd-mins">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="cd-secs">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location" class="section">
+            <h2>The Location</h2>
+            <p><strong>Ceremony & Reception</strong></p>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.8566779290456!2d120.98195!3d14.87528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33965508027f21c3%3A0x85c5b3ff92f3fe38!2sMaravilloza%20Events%20Center!5e0!3m2!1sen!2sph!4v1234567890" 
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <a href="https://www.google.com/maps?q=Maravilloza+Events+Center,+M.+H.+Del+Pilar,+Pulilan,+3005+Bulacan&ftid=0x33965508027f21c3:0x85c5b3ff92f3fe38&entry=gps&lucs=,94284493,47071704,94218641&g_ep=CAISEjI1LjQ5LjkuODM4ODk5MTgzMBgAIMi8ByobLDk0Mjg0NDkzLDQ3MDcxNzA0LDk0MjE4NjQxQgJQSA%3D%3D&skid=c7f28d51-816e-485f-a0d5-93684528df90&g_st=ic" target="_blank" class="text-link">Open in Google Maps</a>
+
+            <h3>Wedding Timeline</h3>
+            <div class="timeline-image">
+                <img src="images/wedding_timeline_portrait.png" alt="Wedding Timeline" class="timeline-img">
+            </div>
+        </section>
+
+        <section id="rsvp" class="section">
+            <h2>RSVP</h2>
+            <p>Please scan the code or fill up the RSVP form to confirm your attendance. The honor of your reply is requested on or before <strong>January 15, 2026</strong>.</p>
+            
+            <div class="rsvp-container">
+                <img src="images/qr_folder/qr_rsvp.png" alt="RSVP QR Code" class="qr-code">
+                
+                <div class="mobile-rsvp-action">
+                    <p class="small-text">Viewing on mobile?</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQGUiYQ47iAGjDvnBWBdByJfU2JYrOEnmOb53Tncqrs0-9OA/viewform?fbclid=IwY2xjawOrkMFleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeXMuaW0xDl0aGOMICCpEjymyWVBoZhAGmmEXSCa5at_NXTD1Y5cNW5N6X_0I_aem_cn6e0WiPTzXCfjAEDKRdFw" target="_blank" class="primary-btn">RSVP Online Now</a>
+                </div>
+            </div>
+        </section>
+
+        </section>
+
+        <section id="story" class="section">
+            <h2>Our Story</h2>
+            <p>He was a lost, wandering young man — searching for direction, for meaning, for a place where his heart could finally rest.
+She was a girl doing her best to keep everything together, trying to make sense of life while quietly carrying more than anyone ever knew.</p>
+
+            <p>And then, in the most unexpected moment, their worlds met.</p>
+
+            <p>He found her at her lowest when life felt heavier than usual. Instead of walking away, he stayed. Piece by piece, he helped pick up what was broken, not to fix her, but to show her she never had to carry anything alone again.
+And in loving him, she helped him find the clarity, strength, and purpose he had long been searching for.</p>
+
+            <p>What started as two weary souls crossing paths soon blossomed into something beautiful. They became college sweethearts — nursing students who studied side by side, survived exams together, and held on to the same dream: to become better people each day, instruments of healing, angels with stethoscopes.</p>
+
+            <p>They grew as individuals, but even more as partners. Through quiet nights, long shifts, failures, victories, and whispered prayers, they learned what real companionship felt like — steady, patient, and full of grace.</p>
+
+            <p>Now, after years of dreaming and striving hand in hand, they are tying the knot.
+Stepping into forever, still side by side, still choosing each other.
+Still anchored in faith, still in pursuit of God's purpose for their lives — not as two separate journeys, but finally as one.</p>
+
+            <p>This is their story — unexpected, imperfect, redeemed, and beautifully theirs.
+And it's only the beginning. ❤</p>
+        </section>
+
+        <section id="gallery" class="section">
+            <h2>Gallery</h2>
+            <p class="gallery-hint">Scroll or swipe to pause</p>
+            <div class="rtl-gallery">
+                <div class="rtl-track" id="rtl-track">
+                    <img src="images/photo1.jpg" alt="Couple photo 1">
+                    <img src="images/photo2.jpg" alt="Couple photo 2">
+                    <img src="images/photo3.jpg" alt="Couple photo 3">
+                     </div>
+            </div>
+        </section>
+
+        <section id="details" class="section">
+            <h2>Guest Details</h2>
+            
+            <div class="detail-block">
+                <h3>Dress Code</h3>
+                <div class="dress-code-images">
+                    <img src="images/attire-samples/ladies.png" alt="Ladies Dress Code" class="dress-code-img">
+                    <img src="images/attire-samples/principal_sponsors.png" alt="Principal Sponsors" class="dress-code-img">
+                </div>
+                <div class="color-palette-container">
+                    <img src="images/attire-samples/color_palette.png" alt="Color Palette" class="color-palette-img">
+                </div>
+                <p>Join us in a toast of champagne dreams and rustic charm by coming in formal attire only in our cozy, romantic tones!</p>
+                
+                <p><strong>Ladies:</strong> Spiced wine (HEX #990000), Terracotta rust (HEX #942d00), Mocha mousse (#a56d6d)</p>
+                
+                <p><strong>Gents:</strong> Deep mocha or brown coats or long-sleeved polos in similar hues.</p>
+                
+                <div class="color-palette-container">
+                    <img src="images/attire-samples/color_palette2.png" alt="Color Palette 2" class="color-palette-img">
+                </div>
+                
+                <p>A tiny favor: please avoid light or white outfits and no jeans/maong, so everything comes together beautifully. Your thoughtful coordination means so much to us.</p>
+            </div>
+
+            <div class="detail-block">
+                <h3>A Note on Gifts</h3>
+                <p>Your presence and prayers are all that we request, but if you're feeling extra kind and blessed, a monetary gift is what we suggest — to help us as we pack and fly off on our next quest. *wink*</p>
+                <div class="gifts-qr-container">
+                    <img src="images/qr_folder/gifts_qr.png" alt="Gifts QR Code" class="qr-code">
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h4>Can I bring someone else to your wedding with me?</h4>
+                <p>We would love to welcome more guests, but we hope you understand that we are keeping our celebration intimate, with each seat reserved for a specific guest.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What should we do after the ceremony?</h4>
+                <p>Please enjoy our cocktail hour right after the ceremony. A selection of our favorite food carts will be available, and you're welcome to use this time to register, mingle, or visit the photo studio. Our coordinators will be nearby if you need any assistance.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can we sit anywhere during the reception?</h4>
+                <p>We kindly ask everyone to follow the seating arrangement we've prepared for your comfort. Our coordinators will gladly guide you to your assigned seats.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can we bring kids?</h4>
+                <p>While we love your little ones, we hope you understand that we will be hosting an adults-only celebration to fully enjoy this special day with you.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>When should I RSVP by?</h4>
+                <p>Please send your RSVP as soon as you can. The latest we can accept is January 15, 2026.</p>
+                <p>If we don't receive a response by then, it will be marked "NO." We'll miss you, but we must finalize our guest count with our suppliers. Thank you for understanding.</p>
+                <p>Please scan the code to confirm your attendance.</p>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <p>© 2025 Hecjon & Coleen. All rights reserved.</p>
+    </footer>
+
+    <!-- Music Control Button -->
+    <button id="musicToggle" class="music-control-btn" title="Play/Pause Music">
+        <span class="music-icon">🎵</span>
+    </button>
+
+    <!-- Background Music (Optional - add your music file path) -->
+    <audio id="backgroundMusic" loop>
+        <source src="audio/Sa Bawat Sandali - Amiel Sol (Official Music Video).mp3" type="audio/mpeg">
+    </audio>
+
+    <nav class="mobile-bottom-nav">
+        <a href="#welcome" class="nav-item">
+            <span>🏠</span>
+            <span class="nav-text">Home</span>
+        </a>
+        <a href="#location" class="nav-item">
+            <span>📍</span>
+            <span class="nav-text">Location</span>
+        </a>
+        <a href="#details" class="nav-item">
+            <span>👔</span>
+            <span class="nav-text">Dress Code</span>
+        </a>
+        <a href="#gallery" class="nav-item">
+            <span>📸</span>
+            <span class="nav-text">Gallery</span>
+        </a>
+        <a href="#rsvp" class="nav-item">
+            <span>💌</span>
+            <span class="nav-text">RSVP</span>
+        </a>
+    </nav>
+
+    <script src="js/script.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
