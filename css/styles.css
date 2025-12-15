@@ -12,7 +12,6 @@
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
-    height: 100%;
 }
 
 *, *:before, *:after {
@@ -27,13 +26,25 @@ body {
     background-color: var(--color-bg);
     /* Make sure this image exists in your images folder! */
     background-image: url('../images/wedding_bg/white_satin.jpg'); 
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center;
-    min-height: 100vh;
     line-height: 1.6;
     padding-bottom: 80px; /* Space for mobile nav */
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-size: 150%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-attachment: scroll;
+        background-size: 200%;
+    }
 }
 
 /* --- 2. Typography (Fluid Scale) --- */
