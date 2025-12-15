@@ -200,21 +200,6 @@
         });
     }
 
-    // --- 3d. Attire Button Animation ---
-    const attireButtonObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                attireButtonObserver.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    const attireContainer = document.querySelector('.attire-button-container');
-    if (attireContainer) {
-        attireButtonObserver.observe(attireContainer);
-    }
-
     // --- 4. Attire Inspo Modal ---
     const attireBtn = document.querySelector('.attire-inspo-btn');
     const attireModal = document.getElementById('attireModal');

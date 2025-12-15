@@ -527,10 +527,6 @@ p {
     margin-bottom: 20px;
 }
 
-.attire-button-container.visible {
-    animation: fadeUp 0.8s ease forwards;
-}
-
 .attire-inspo-btn {
     padding: 12px 30px;
     background-color: var(--color-primary);
