@@ -204,7 +204,7 @@
     const attireButtonObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeUp 0.8s ease 0.3s forwards';
+                entry.target.classList.add('visible');
                 attireButtonObserver.unobserve(entry.target);
             }
         });
