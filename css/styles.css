@@ -567,15 +567,17 @@ p {
     background-color: white;
     border-radius: 12px;
     padding: 30px;
-    max-width: 900px;
+    max-width: 600px;
     width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     animation: modalSlideIn 0.3s ease;
 }
 
 .modal-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
     justify-items: center;
 }
