@@ -499,9 +499,15 @@ p {
 }
 
 /* --- 11. Attire Inspo Modal --- */
+.attire-inspo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
 .attire-inspo-link {
     display: inline-block;
-    margin-top: 15px;
     padding: 10px 20px;
     background-color: var(--color-primary);
     color: white;
