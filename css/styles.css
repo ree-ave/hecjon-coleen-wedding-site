@@ -498,101 +498,35 @@ p {
     display: inline-block;
 }
 
-/* --- 11. Attire Inspo Modal --- */
-.attire-inspo-container {
+/* --- 11. Attire Inspo Button --- */
+.attire-button-container {
     display: flex;
     justify-content: center;
     margin-top: 15px;
     margin-bottom: 20px;
 }
 
-.attire-inspo-link {
-    display: inline-block;
-    padding: 10px 20px;
+.attire-inspo-btn {
+    padding: 12px 30px;
     background-color: var(--color-primary);
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 25px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
-    transition: all 0.3s ease;
     cursor: pointer;
-}
-
-.attire-inspo-link:hover {
-    background-color: #7a5548;
-    transform: scale(1.05);
+    transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(143, 103, 93, 0.3);
 }
 
-.attire-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.attire-modal.active {
-    display: flex;
-}
-
-.modal-content {
-    position: relative;
-    background-color: white;
-    border-radius: 12px;
-    padding: 20px;
-    max-width: 90vw;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
-
-.modal-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--color-primary);
-    cursor: pointer;
-    padding: 0;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease;
-}
-
-.modal-close:hover {
-    transform: scale(1.2);
-}
-
-.modal-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.modal-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.modal-img:hover {
+.attire-inspo-btn:hover {
+    background-color: #7a5548;
     transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(143, 103, 93, 0.4);
+}
+
+.attire-inspo-btn:active {
+    transform: scale(0.95);
 }
 
 @keyframes scroll {
