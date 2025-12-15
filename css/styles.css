@@ -119,6 +119,18 @@ p {
     border-bottom: 1px solid rgba(212, 191, 158, 0.3);
 }
 
+/* Welcome Section Paragraph Animations */
+#welcome p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#welcome p.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 /* --- 5. Countdown (Responsive) --- */
 .countdown-heading {
     font-size: clamp(3rem, 10vw, 6rem);
