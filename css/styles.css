@@ -12,6 +12,7 @@
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    height: 100%;
 }
 
 *, *:before, *:after {
@@ -29,6 +30,8 @@ body {
     background-attachment: scroll;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: top center;
+    min-height: 100vh;
     line-height: 1.6;
     padding-bottom: 80px; /* Space for mobile nav */
 }
