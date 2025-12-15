@@ -200,7 +200,32 @@
         });
     }
 
-    // --- 4. Gallery Loop Fix (Optional) ---
+    // --- 4. Attire Inspo Modal ---
+    const attireBtn = document.querySelector('.attire-inspo-btn');
+    const attireModal = document.getElementById('attireModal');
+
+    if (attireBtn && attireModal) {
+        // Open modal when button is clicked
+        attireBtn.addEventListener('click', () => {
+            attireModal.classList.add('active');
+        });
+
+        // Close modal when clicking anywhere on the modal (outside the content area or background)
+        attireModal.addEventListener('click', (e) => {
+            if (e.target === attireModal) {
+                attireModal.classList.remove('active');
+            }
+        });
+
+        // Also close when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && attireModal.classList.contains('active')) {
+                attireModal.classList.remove('active');
+            }
+        });
+    }
+
+    // --- 5. Gallery Loop Fix (Optional) ---
     // If you don't have enough images to fill the screen, this doubles them
     const track = document.getElementById('rtl-track');
     if (track) {
