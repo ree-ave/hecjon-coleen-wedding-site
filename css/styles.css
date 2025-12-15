@@ -512,8 +512,8 @@ p {
     color: white;
     border: none;
     border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(143, 103, 93, 0.3);
