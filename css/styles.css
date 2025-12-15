@@ -525,6 +525,9 @@ p {
     justify-content: center;
     margin-top: 15px;
     margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.3s;
 }
 
 .attire-inspo-btn {
