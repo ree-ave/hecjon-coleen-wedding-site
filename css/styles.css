@@ -38,13 +38,16 @@ body {
 /* ****************************************************** */
 @media (max-width: 768px) {
     body {
+        /* Use mobile-optimized background image */
+        background-image: url('../images/wedding_bg/white_satin-mobile.jpg') !important;
+        
         /* Fix 1: Eliminates jiggle/movement */
         background-attachment: scroll !important; 
         
-        /* Fix 2 (NEW): Explicitly scale based on width, reducing zoom on tall screens */
+        /* Fix 2: Explicitly scale based on width, reducing zoom on tall screens */
         background-size: 100% auto !important; 
         
-        /* Fix 3 (NEW): Ensure the image starts from the top */
+        /* Fix 3: Ensure the image starts from the top */
         background-position: center top !important; 
     }
 }
