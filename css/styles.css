@@ -33,20 +33,6 @@ body {
     padding-bottom: 80px; /* Space for mobile nav */
 }
 
-@media (max-width: 768px) {
-    body {
-        background-attachment: scroll;
-        background-size: 150%;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        background-attachment: scroll;
-        background-size: 200%;
-    }
-}
-
 /* --- 2. Typography (Fluid Scale) --- */
 h1, h2, h3 {
     font-family: var(--font-heading);
