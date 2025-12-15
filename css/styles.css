@@ -26,12 +26,26 @@ body {
     background-color: var(--color-bg);
     /* Make sure this image exists in your images folder! */
     background-image: url('../images/wedding_bg/white_satin.jpg'); 
-    background-attachment: fixed;
+    background-attachment: fixed; /* Desktop Default */
     background-size: cover;
     background-repeat: no-repeat;
     line-height: 1.6;
     padding-bottom: 80px; /* Space for mobile nav */
 }
+
+/* ****************************************************** */
+/* * CRITICAL MOBILE BACKGROUND FIX: Prevents Zoom/Jitter */
+/* ****************************************************** */
+@media (max-width: 768px) {
+    body {
+        /* OVERRIDE: Forces background to scroll normally with content on mobile/tablet. */
+        background-attachment: scroll !important; 
+        /* Ensures the background image starts from the top center */
+        background-position: top center !important; 
+    }
+}
+/* ****************************************************** */
+
 
 /* --- 2. Typography (Fluid Scale) --- */
 h1, h2, h3 {
@@ -349,7 +363,7 @@ p {
     transform: translateY(0) !important;
 }
 
-/* --- 7. FAQ Section --- */
+/* --- 7. FAQ Section (Used for Details) --- */
 .faq-item {
     background: rgba(143, 103, 93, 0.08);
     backdrop-filter: blur(10px);
