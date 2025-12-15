@@ -38,10 +38,14 @@ body {
 /* ****************************************************** */
 @media (max-width: 768px) {
     body {
-        /* OVERRIDE: Forces background to scroll normally with content on mobile/tablet. */
+        /* Fix 1: Eliminates jiggle/movement */
         background-attachment: scroll !important; 
-        /* Ensures the background image starts from the top center */
-        background-position: top center !important; 
+        
+        /* Fix 2 (NEW): Explicitly scale based on width, reducing zoom on tall screens */
+        background-size: 100% auto !important; 
+        
+        /* Fix 3 (NEW): Ensure the image starts from the top */
+        background-position: center top !important; 
     }
 }
 /* ****************************************************** */
