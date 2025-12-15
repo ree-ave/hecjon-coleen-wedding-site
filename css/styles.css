@@ -26,8 +26,9 @@ body {
     background-color: var(--color-bg);
     /* Make sure this image exists in your images folder! */
     background-image: url('../images/wedding_bg/white_satin.jpg'); 
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
+    background-repeat: no-repeat;
     line-height: 1.6;
     padding-bottom: 80px; /* Space for mobile nav */
 }
