@@ -214,6 +214,7 @@ p {
     margin: 30px auto 40px;
     display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: float 3s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
@@ -232,6 +233,7 @@ p {
     margin: 30px auto 40px;
     display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: float 3s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
@@ -731,4 +733,9 @@ p {
 @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); } /* Ensure you have enough images to loop */
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
 }
