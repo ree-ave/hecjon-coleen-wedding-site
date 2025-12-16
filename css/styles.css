@@ -650,6 +650,17 @@ p {
     flex-shrink: 0;
 }
 
+@media (max-width: 768px) {
+    .gallery-container {
+        padding: 20px 15px;
+        gap: 12px;
+    }
+
+    .gallery-container img {
+        height: 200px;
+    }
+}
+
 /* --- 11. Attire Inspo Button --- */
 .attire-button-container {
     display: flex;
