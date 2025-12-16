@@ -733,6 +733,15 @@ p {
     transform: scale(1.05);
 }
 
+.modal-exit-hint {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
 @keyframes modalSlideIn {
     from {
         opacity: 0;
