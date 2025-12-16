@@ -171,6 +171,25 @@
         }
     });
 
+    // --- 2f. Prenup and Location Image Animation ---
+    const prenupImageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target.closest('.story-prenup-img') || entry.target.closest('.location-img');
+                if (img) {
+                    setTimeout(() => {
+                        img.classList.add('visible');
+                    }, 150);
+                }
+                prenupImageObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.story-prenup-img, .location-img').forEach(img => {
+        prenupImageObserver.observe(img);
+    });
+
     // --- 3. Music Control Button ---
     const musicToggle = document.getElementById('musicToggle');
     const backgroundMusic = document.getElementById('backgroundMusic');
