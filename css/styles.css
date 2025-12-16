@@ -149,7 +149,8 @@ p {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(143, 103, 93, 0.15);
     border-radius: 12px;
-    margin: 60px 20px;
+    margin: 60px 0;
+    padding: 60px 0;
 }
 
 #welcome p {
@@ -169,7 +170,8 @@ p {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(143, 103, 93, 0.15);
     border-radius: 12px;
-    margin: 60px 20px;
+    margin: 60px 0;
+    padding: 60px 0;
 }
 
 /* --- 5. Countdown (Responsive) --- */
