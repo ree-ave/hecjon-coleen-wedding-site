@@ -144,6 +144,12 @@ p {
 }
 
 /* Welcome Section Paragraph Animations */
+#welcome {
+    background: rgba(143, 103, 93, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(143, 103, 93, 0.15);
+}
+
 #welcome p {
     opacity: 0;
     transform: translateY(20px);
