@@ -175,6 +175,31 @@ p {
 }
 
 /* --- 5. Countdown (Responsive) --- */
+#countdown-section {
+    padding: 40px 0;
+    position: relative;
+}
+
+#countdown-section::before,
+#countdown-section::after {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 2px;
+    background: var(--color-secondary);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.6;
+}
+
+#countdown-section::before {
+    top: 0;
+}
+
+#countdown-section::after {
+    bottom: 0;
+}
+
 .countdown-heading {
     font-size: clamp(3rem, 10vw, 6rem);
 }
