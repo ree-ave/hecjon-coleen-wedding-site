@@ -163,6 +163,15 @@ p {
     transform: translateY(0) !important;
 }
 
+/* Our Story Section */
+#story {
+    background: rgba(143, 103, 93, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(143, 103, 93, 0.15);
+    border-radius: 12px;
+    margin: 60px 20px;
+}
+
 /* --- 5. Countdown (Responsive) --- */
 .countdown-heading {
     font-size: clamp(3rem, 10vw, 6rem);
