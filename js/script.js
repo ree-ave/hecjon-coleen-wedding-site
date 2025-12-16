@@ -1,4 +1,12 @@
 (function() {
+    // --- 0. Gallery Loop Fix (MUST RUN FIRST) ---
+    // Duplicate gallery images immediately before any animations start
+    const track = document.getElementById('rtl-track');
+    if (track) {
+        const originalHTML = track.innerHTML;
+        track.innerHTML = originalHTML + originalHTML;
+    }
+
     // --- 1. Countdown Logic ---
     const weddingDate = new Date(2026, 1, 8, 0, 0, 0); // Feb 8, 2026
     const daysEl = document.getElementById('cd-days');

@@ -633,32 +633,22 @@ p {
 }
 
 /* --- 9. Gallery --- */
-.gallery-container {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    padding: 20px 0;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+.rtl-gallery {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
 }
-
-.gallery-container img {
+.rtl-track {
+    display: inline-block;
+    animation: scroll 40s linear infinite;
+    animation-delay: 0.5s;
+}
+.rtl-track img {
     height: 250px;
     width: auto;
-    min-width: auto;
+    margin-right: 15px;
     border-radius: 8px;
-    flex-shrink: 0;
-}
-
-@media (max-width: 768px) {
-    .gallery-container {
-        padding: 20px 15px;
-        gap: 12px;
-    }
-
-    .gallery-container img {
-        height: 200px;
-    }
+    display: inline-block;
 }
 
 /* --- 11. Attire Inspo Button --- */
@@ -762,6 +752,11 @@ p {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Ensure you have enough images to loop */
 }
 
 @keyframes fadeUpImage {
