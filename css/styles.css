@@ -148,6 +148,8 @@ p {
     background: rgba(143, 103, 93, 0.08);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(143, 103, 93, 0.15);
+    border-radius: 12px;
+    margin: 60px 20px;
 }
 
 #welcome p {
