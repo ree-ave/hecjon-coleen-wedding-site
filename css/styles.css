@@ -12,6 +12,8 @@
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    /* CRITICAL FIX: Stops the website from showing a horizontal scrollbar */
+    overflow-x: hidden;
 }
 
 *, *:before, *:after {
@@ -129,15 +131,13 @@ p {
     }
 }
 
-/* Tablet and Mobile - 800px to 1000px wide by 1200px to 1600px tall */
+/* Tablet and Mobile */
 @media (max-width: 1024px) {
     .hero-cover-img {
-        min-width: 800px;
-        max-width: 1000px;
-        min-height: 1200px;
-        max-height: 1600px;
         width: 100vw;
         height: auto;
+        min-height: 250px;
+        max-height: 500px;
     }
 }
 
