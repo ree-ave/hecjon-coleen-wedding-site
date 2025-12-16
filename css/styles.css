@@ -641,7 +641,8 @@ p {
 .rtl-track {
     display: inline-block;
     animation: scroll 40s linear infinite;
-    animation-delay: 0.5s;
+    animation-play-state: paused;
+    will-change: transform;
 }
 .rtl-track img {
     height: 250px;

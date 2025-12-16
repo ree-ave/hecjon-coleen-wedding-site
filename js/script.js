@@ -5,6 +5,49 @@
     if (track) {
         const originalHTML = track.innerHTML;
         track.innerHTML = originalHTML + originalHTML;
+        
+        // Preload all images before animation starts
+        const images = track.querySelectorAll('img');
+        let imagesLoaded = 0;
+        
+        const startAnimation = () => {
+            // Add animation start delay to ensure images are loaded
+            setTimeout(() => {
+                track.style.animationPlayState = 'running';
+            }, 1500);
+        };
+        
+        // If no images, start animation anyway
+        if (images.length === 0) {
+            startAnimation();
+        } else {
+            // Wait for all images to load
+            images.forEach((img) => {
+                if (img.complete) {
+                    imagesLoaded++;
+                } else {
+                    img.addEventListener('load', () => {
+                        imagesLoaded++;
+                        if (imagesLoaded === images.length) {
+                            startAnimation();
+                        }
+                    });
+                    img.addEventListener('error', () => {
+                        imagesLoaded++;
+                        if (imagesLoaded === images.length) {
+                            startAnimation();
+                        }
+                    });
+                }
+            });
+            // Fallback: start animation after 2 seconds regardless
+            setTimeout(() => {
+                track.style.animationPlayState = 'running';
+            }, 2000);
+        }
+        
+        // Pause animation initially
+        track.style.animationPlayState = 'paused';
     }
 
     // --- 1. Countdown Logic ---
