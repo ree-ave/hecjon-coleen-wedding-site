@@ -224,6 +224,24 @@ p {
     }
 }
 
+.location-img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin: 30px auto 40px;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .location-img {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: 20px auto 0;
+    }
+}
+
 /* --- 5. Countdown (Responsive) --- */
 #countdown-section {
     padding: 40px 0;
