@@ -109,6 +109,38 @@ p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.hero-cover-img {
+    width: 100vw;
+    height: auto;
+    margin-top: 20px;
+    margin-left: calc(-50vw + 50%);
+    border-radius: 0;
+    object-fit: cover;
+    min-height: 400px;
+}
+
+/* Desktop - Min 2560px wide by 1440px tall */
+@media (min-width: 2561px) {
+    .hero-cover-img {
+        min-width: 2560px;
+        min-height: 1440px;
+        width: 100vw;
+        height: auto;
+    }
+}
+
+/* Tablet and Mobile - 800px to 1000px wide by 1200px to 1600px tall */
+@media (max-width: 1024px) {
+    .hero-cover-img {
+        min-width: 800px;
+        max-width: 1000px;
+        min-height: 1200px;
+        max-height: 1600px;
+        width: 100vw;
+        height: auto;
+    }
+}
+
 .hero-divider {
     width: 350px;
     height: 2px;
